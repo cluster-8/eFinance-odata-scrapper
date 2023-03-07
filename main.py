@@ -22,7 +22,7 @@ def get_IFs():
 
                 if recursoAlreadyExist: 
                     print("recurso já existe: ", recursoAlreadyExist['Recurso'])
-                    break
+                    continue
 
                 database.banks.update_one(bank, {'$push': {'apis':  {
                     'Api': data['Api'], 'Versao': data['Versao'], 'Recurso': data['Recurso'], 'Argumento': data['Argumento'], 'Situacao': data['Situacao'], 'URLDados': data['URLDados'], 'URLConsulta': data['URLConsulta']
