@@ -3,7 +3,7 @@ import requests
 import datetime
 import db
 
-
+# * OLINDA SOURCE
 def instituicoes():
     
     url = "https://olinda.bcb.gov.br/olinda/servico/DASFN/versao/v1/odata/Recursos?$top=10000&$format=json&$select=Api,Versao,CnpjInstituicao,NomeInstituicao,NomeContato,EmailContato,Recurso,Argumento,Situacao,URLDados,URLConsulta"
@@ -97,7 +97,8 @@ def get_instituicoes_by_grupo(grupo_codigo):
         return response.json()['value']
     except Exception as e:
         print(f"Get IF Services error: {e}")
-        
+ 
+# * DATABASE SOURCE       
 def get_instituicao_id_by_cnpj(cnpj):
     try:
         
@@ -123,8 +124,7 @@ def get_servico_id_by_codigo(codigo):
         return res[0]
     except Exception as e:
         print(f"Get Serviço error: {e}")
-        
-        
+             
 def get_all_instituicoes():
     try:
         conn = db.get_database_psql()

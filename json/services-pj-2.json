@@ -1,0 +1,1082 @@
+[
+  {
+    "codigo": "0101",
+    "nome": "Confecção de ficha cadastral",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cliente",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0102",
+    "nome": "Renovação de ficha cadastral",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cliente",
+    "moeda": "Real",
+    "periodicidade": "A cada 365 dias"
+  },
+  {
+    "codigo": "0103",
+    "nome": "Consultas a serviços de proteção ao crédito",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por consulta",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0201",
+    "nome": "Comum, para débito, saque e consultas",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 30 dias"
+  },
+  {
+    "codigo": "0202",
+    "nome": "Débito, saque e garantia de cheque-anuidade do contrato",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 0 dias"
+  },
+  {
+    "codigo": "0203",
+    "nome": "Débito, saque e garantia de cheque-confecção do cartão",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0204",
+    "nome": "Cartão multiplo-nacional-anuidade do contrato",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 0 dias"
+  },
+  {
+    "codigo": "0205",
+    "nome": "Cartão multiplo-nacional-confecção do cartão",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0206",
+    "nome": "Cartão multiplo-internacional-anuidade do contrato",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 0 dias"
+  },
+  {
+    "codigo": "0207",
+    "nome": "Cartão multiplo-internacional-confecção do cartão",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0208",
+    "nome": "Cartão multiplo adicional-nacional-anuidade do contrato",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 0 dias"
+  },
+  {
+    "codigo": "0209",
+    "nome": "Cartão multiplo adicional-nacional-confecção do cartão",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0210",
+    "nome": "Cartão multiplo adicional-intern.-anuidade do contrato",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 0 dias"
+  },
+  {
+    "codigo": "0211",
+    "nome": "Cartão multiplo adicional-Intern.-confecção do cartão",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0302",
+    "nome": "Talão-20 folhas (segundo talão no mês)",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por talao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0303",
+    "nome": "Cheque administrativo",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cheque",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0304",
+    "nome": "Cheque avulso",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cheque",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0305",
+    "nome": "Cheque devolvido por insuficiência de fundos",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cheque",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0306",
+    "nome": "Oposição/sustação de pagamento de cheque",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cheque",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0308",
+    "nome": "Inclusão no Cadastro de Cheques sem Fundo",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cheque",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0309",
+    "nome": "Exclusão do Cadastro de Cheques sem Fundo",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cheque",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0310",
+    "nome": "Cobrança de cheque por compensação",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cheque",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0311",
+    "nome": "Cheque TB (Transferência Bancária sem CPMF)",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cheque",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0312",
+    "nome": "Cheque Administrativo com vl.igual ou superior a R$5.000,00 (vl.fx.+%)",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Cheque",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0313",
+    "nome": "Cobrança de Cheque por compensação com Vl. = ou > R$ 5.000,00(Vl.fx+%)",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cheque",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0401",
+    "nome": "Abertura de conta",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0402",
+    "nome": "Manutenção de conta ativa",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 30 dias"
+  },
+  {
+    "codigo": "0403",
+    "nome": "Manutenção de conta inativa",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 30 dias"
+  },
+  {
+    "codigo": "0404",
+    "nome": "Adiant. a deposit., incl. excesso limite de ch. especial",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por operacao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0405",
+    "nome": "Concessão de cheque especial/conta garantida",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0406",
+    "nome": "Renovação de cheque especial/conta garantida",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 90 dias"
+  },
+  {
+    "codigo": "0407",
+    "nome": "Débito autorizado em conta-corrente",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por operacao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0408",
+    "nome": "Banco domestico-conta principal (com limite de acessos)",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 0 dias"
+  },
+  {
+    "codigo": "0409",
+    "nome": "Banco doméstico-conta secundária (com limite de acessos)",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 0 dias"
+  },
+  {
+    "codigo": "0501",
+    "nome": "Saque em caixa automática externa/banco 24 horas",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por saque",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0502",
+    "nome": "Emissão de DOC C",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por operacao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0503",
+    "nome": "Emissão de DOC D",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por operacao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0505",
+    "nome": "Depósito em outra agência",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por operacao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0506",
+    "nome": "Transferência Eletrônica Disponível - TED",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0601",
+    "nome": "Em terminal  eletrônico",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por emissao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0602",
+    "nome": "Por outros meios",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por emissao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0603",
+    "nome": "Cópias de microfilmes, microfichas ou assemelhados",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por emissao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0701",
+    "nome": "Entrada por borderô (listagem de titulos)",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por titulo",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0702",
+    "nome": "Entrada por meio magnético",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por titulo",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0704",
+    "nome": "Manutenção de título vencido",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por titulo",
+    "moeda": "Real",
+    "periodicidade": "A cada 30 dias"
+  },
+  {
+    "codigo": "0705",
+    "nome": "Envio para protesto",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por titulo",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0706",
+    "nome": "Sustação de protesto",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por titulo",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0707",
+    "nome": "Devolução de título",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por titulo",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0801",
+    "nome": "Abertura de crédito",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por operacao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0802",
+    "nome": "Renegociação de dívida",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por operacao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0803",
+    "nome": "Substituição de garantia",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por operacao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0804",
+    "nome": "Custódia de cheque pré-datado",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por operacao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0805",
+    "nome": "Rescisão Contratual (Quitação Antecipada)",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Percentual",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0901",
+    "nome": "Segunda via de documento",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por copia",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0902",
+    "nome": "Ressarcimento de despesas-telefonema",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por chamada",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0903",
+    "nome": "Ressarcimento de despesas-fax",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por folha",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0906",
+    "nome": "Pagamento de funcionários via meio magnético",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por funcionario",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1001",
+    "nome": "Exportação: Edição de Contrato de Câmbio",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1003",
+    "nome": "Exportação: Liquidação com Ordem de Pagamento",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1004",
+    "nome": "Exportação: Conferência de Documentos",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1005",
+    "nome": "Exportação: Câmbio Simplicado (todas as despesas do cliente no Banco)",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1006",
+    "nome": "Importação: Edição de Contrato de Câmbio",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1007",
+    "nome": "Importação: Emissão de Ordem de Pagamento",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1008",
+    "nome": "Importação: Demais Tarifas (Não incluem despesas no Exteior)",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1009",
+    "nome": "Importação: Câmbio Simplificado(Todas as despesas do cliente no Banco)",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1010",
+    "nome": "Financeiro -Ingresso de Recursos: Edição de Contrato de Câmbio",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1012",
+    "nome": "Financeiro -Ingresso de Recursos: Liquidação com Ordem de pagamento",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1016",
+    "nome": "Financeiro -Remessa de Recursos: Edição de Contrato de Câmbio",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1018",
+    "nome": "Financeiro - Remessa de Recursos: Emissão de Ordem de Pagamento",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0102",
+    "nome": "Renovação de ficha cadastral",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cliente",
+    "moeda": "Real",
+    "periodicidade": "A cada 0 dias"
+  },
+  {
+    "codigo": "0301",
+    "nome": "Talão-10 folhas",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por talao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0402",
+    "nome": "Manutenção de conta ativa",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 0 dias"
+  },
+  {
+    "codigo": "0406",
+    "nome": "Renovação de cheque especial/conta garantida",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 0 dias"
+  },
+  {
+    "codigo": "0703",
+    "nome": "Entrada sem registro - por boleto emitido pelo cliente",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por titulo",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0801",
+    "nome": "Abertura de crédito",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por operacao",
+    "moeda": "Percentual",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0904",
+    "nome": "Envelopamento de documentos",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por envelope",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0905",
+    "nome": "Pagamento de funcionários via relação",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por funcionario",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0314",
+    "nome": "Cheque TB com valor igual ou superior R$ 5.000,00 (vl.fixo + %)",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cheque",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0403",
+    "nome": "Manutenção de conta inativa",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 180 dias"
+  },
+  {
+    "codigo": "0805",
+    "nome": "Rescisão Contratual (Quitação Antecipada)",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1002",
+    "nome": "Exportação: Edição de Contrato de Câmbio via Internet",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1011",
+    "nome": "Financeiro-Ingresso de Recursos:Edição de Cont. de Câmbio Via Internet",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1013",
+    "nome": "Financeiro - Ingresso de Recursos: Confecção de ROF",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1014",
+    "nome": "Financeiro - Ingresso de Recursos : Confecção de esquema de ROF",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1017",
+    "nome": "Financeiro-Remessa de Recursos: Edição de Cont. de Câmbio Via Internet",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1019",
+    "nome": "Financeiro - Remessa de Recursos: Alteração de ROF",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1015",
+    "nome": "Financeiro - Ingresso de Recursos: Confecção de Cadastro no Cademp",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0201",
+    "nome": "Comum, para débito, saque e consultas",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 365 dias"
+  },
+  {
+    "codigo": "0204",
+    "nome": "Cartão multiplo-nacional-anuidade do contrato",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 365 dias"
+  },
+  {
+    "codigo": "0206",
+    "nome": "Cartão multiplo-internacional-anuidade do contrato",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 365 dias"
+  },
+  {
+    "codigo": "0208",
+    "nome": "Cartão multiplo adicional-nacional-anuidade do contrato",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 360 dias"
+  },
+  {
+    "codigo": "0210",
+    "nome": "Cartão multiplo adicional-intern.-anuidade do contrato",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 360 dias"
+  },
+  {
+    "codigo": "0312",
+    "nome": "Cheque Administrativo com vl.igual ou superior a R$5.000,00 (vl.fx.+%)",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "Por Cheque",
+    "moeda": "Percentual",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0313",
+    "nome": "Cobrança de Cheque por compensação com Vl. = ou > R$ 5.000,00(Vl.fx+%)",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cheque",
+    "moeda": "Percentual",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0314",
+    "nome": "Cheque TB com valor igual ou superior R$ 5.000,00 (vl.fixo + %)",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cheque",
+    "moeda": "Percentual",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0403",
+    "nome": "Manutenção de conta inativa",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 0 dias"
+  },
+  {
+    "codigo": "0405",
+    "nome": "Concessão de cheque especial/conta garantida",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Percentual",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0406",
+    "nome": "Renovação de cheque especial/conta garantida",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Percentual",
+    "periodicidade": "A cada 365 dias"
+  },
+  {
+    "codigo": "0701",
+    "nome": "Entrada por borderô (listagem de titulos)",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por titulo",
+    "moeda": "Percentual",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0704",
+    "nome": "Manutenção de título vencido",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por titulo",
+    "moeda": "Real",
+    "periodicidade": "A cada 0 dias"
+  },
+  {
+    "codigo": "0802",
+    "nome": "Renegociação de dívida",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por operacao",
+    "moeda": "Percentual",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0201",
+    "nome": "Comum, para débito, saque e consultas",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 0 dias"
+  },
+  {
+    "codigo": "0504",
+    "nome": "Ordem de Pagamento",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por operacao",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0102",
+    "nome": "Renovação de ficha cadastral",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cliente",
+    "moeda": "Real",
+    "periodicidade": "A cada 180 dias"
+  },
+  {
+    "codigo": "0201",
+    "nome": "Comum, para débito, saque e consultas",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 180 dias"
+  },
+  {
+    "codigo": "0204",
+    "nome": "Cartão multiplo-nacional-anuidade do contrato",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 360 dias"
+  },
+  {
+    "codigo": "0206",
+    "nome": "Cartão multiplo-internacional-anuidade do contrato",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 360 dias"
+  },
+  {
+    "codigo": "0406",
+    "nome": "Renovação de cheque especial/conta garantida",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 180 dias"
+  },
+  {
+    "codigo": "0101",
+    "nome": "Confecção de ficha cadastral",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cliente",
+    "moeda": "Percentual",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0102",
+    "nome": "Renovação de ficha cadastral",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cliente",
+    "moeda": "Percentual",
+    "periodicidade": "A cada 180 dias"
+  },
+  {
+    "codigo": "0403",
+    "nome": "Manutenção de conta inativa",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 190 dias"
+  },
+  {
+    "codigo": "0404",
+    "nome": "Adiant. a deposit., incl. excesso limite de ch. especial",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por operacao",
+    "moeda": "Percentual",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0406",
+    "nome": "Renovação de cheque especial/conta garantida",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Percentual",
+    "periodicidade": "A cada 90 dias"
+  },
+  {
+    "codigo": "0201",
+    "nome": "Comum, para débito, saque e consultas",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 1440 dias"
+  },
+  {
+    "codigo": "0102",
+    "nome": "Renovação de ficha cadastral",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cliente",
+    "moeda": "Real",
+    "periodicidade": "A cada 360 dias"
+  },
+  {
+    "codigo": "0406",
+    "nome": "Renovação de cheque especial/conta garantida",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 30 dias"
+  },
+  {
+    "codigo": "0402",
+    "nome": "Manutenção de conta ativa",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 360 dias"
+  },
+  {
+    "codigo": "0403",
+    "nome": "Manutenção de conta inativa",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 360 dias"
+  },
+  {
+    "codigo": "0408",
+    "nome": "Banco domestico-conta principal (com limite de acessos)",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 30 dias"
+  },
+  {
+    "codigo": "0409",
+    "nome": "Banco doméstico-conta secundária (com limite de acessos)",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 30 dias"
+  },
+  {
+    "codigo": "0406",
+    "nome": "Renovação de cheque especial/conta garantida",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 365 dias"
+  },
+  {
+    "codigo": "0201",
+    "nome": "Comum, para débito, saque e consultas",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 360 dias"
+  },
+  {
+    "codigo": "0406",
+    "nome": "Renovação de cheque especial/conta garantida",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 120 dias"
+  },
+  {
+    "codigo": "0202",
+    "nome": "Débito, saque e garantia de cheque-anuidade do contrato",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 360 dias"
+  },
+  {
+    "codigo": "0406",
+    "nome": "Renovação de cheque especial/conta garantida",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Percentual",
+    "periodicidade": "A cada 30 dias"
+  },
+  {
+    "codigo": "0102",
+    "nome": "Renovação de ficha cadastral",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cliente",
+    "moeda": "Real",
+    "periodicidade": "A cada 720 dias"
+  },
+  {
+    "codigo": "0803",
+    "nome": "Substituição de garantia",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por operacao",
+    "moeda": "Percentual",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "0201",
+    "nome": "Comum, para débito, saque e consultas",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 90 dias"
+  },
+  {
+    "codigo": "0704",
+    "nome": "Manutenção de título vencido",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por titulo",
+    "moeda": "Real",
+    "periodicidade": "A cada 60 dias"
+  },
+  {
+    "codigo": "0202",
+    "nome": "Débito, saque e garantia de cheque-anuidade do contrato",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 365 dias"
+  },
+  {
+    "codigo": "0704",
+    "nome": "Manutenção de título vencido",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por titulo",
+    "moeda": "Real",
+    "periodicidade": "A cada 7 dias"
+  },
+  {
+    "codigo": "0210",
+    "nome": "Cartão multiplo adicional-intern.-anuidade do contrato",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por cartao",
+    "moeda": "Real",
+    "periodicidade": "A cada 365 dias"
+  },
+  {
+    "codigo": "0402",
+    "nome": "Manutenção de conta ativa",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 180 dias"
+  },
+  {
+    "codigo": "0704",
+    "nome": "Manutenção de título vencido",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por titulo",
+    "moeda": "Real",
+    "periodicidade": "A cada 180 dias"
+  },
+  {
+    "codigo": "0406",
+    "nome": "Renovação de cheque especial/conta garantida",
+    "tipo": "Pessoa Jurídica",
+    "unidade": "por conta",
+    "moeda": "Real",
+    "periodicidade": "A cada 360 dias"
+  }
+]

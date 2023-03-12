@@ -5,7 +5,7 @@ import requests
 
 import get_data
 
-# * generate json file
+# * GENERATE JSON FILES
 def servicos_pf():
     '''
         Gera uma massa de dados em json com todos os servicos para pessoa física na plataforma odata
@@ -44,7 +44,7 @@ def servicos_pf():
                         all_services.append(obj)
                         print(datetime.datetime.now(), ' - Inserindo: ', obj['codigo'], obj['nome'])
                         json_string = [ob for ob in all_services]
-                        with open('services-2.json', 'w', encoding='utf-8') as f:
+                        with open('./json/services-2.json', 'w', encoding='utf-8') as f:
                             json.dump(json_string, f, ensure_ascii=False)
                         f.close()
                     else:
@@ -64,7 +64,7 @@ def servicos_pj():
         ifs = get_data.instituicoes()        
         all_services = []
         
-        # json_data = open('services-pj-2.json')
+        # json_data = open('./json/services-pj-2.json')
         # j_data = json.load(json_data)
         
         idx = len(ifs) - 1
@@ -119,7 +119,7 @@ def instituicoes():
             if obj not in aux: aux.append(obj)
             # aux.append(obj)
             json_string = [ob for ob in aux]
-            with open('instituicoes-4.json', 'w', encoding='utf-8') as f:
+            with open('./json/instituicoes-4.json', 'w', encoding='utf-8') as f:
                 json.dump(json_string, f, ensure_ascii=False)
             f.close()
         # json_string = [ob for ob in aux]
@@ -145,7 +145,7 @@ def grupos():
             }
             aux.append(obj)
         json_string = [ob for ob in aux]
-        with open('grupos.json', 'w', encoding='utf-8') as f:
+        with open('./json/grupos.json', 'w', encoding='utf-8') as f:
             json.dump(json_string, f, ensure_ascii=False)
         f.close()
         return 
@@ -186,7 +186,7 @@ def tarifas_pf():
                     
                     if obj not in aux: aux.append(obj)
                     json_string = [ob for ob in aux]
-                    with open('tarifas.json', 'w', encoding='utf-8') as f:
+                    with open('./json/tarifas-pf.json', 'w', encoding='utf-8') as f:
                         json.dump(json_string, f, ensure_ascii=False)
                     f.close()
                     
