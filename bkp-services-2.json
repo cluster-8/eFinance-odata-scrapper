@@ -1,0 +1,554 @@
+[
+  {
+    "codigo": "1101",
+    "nome": "Confecção de cadastro para início de relacionamento - CADASTRO",
+    "tipo": "Pessoa Física",
+    "unidade": "Por cliente",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1201",
+    "nome": "CARTÃO - Fornecimento de 2º via de cartão com função débito",
+    "tipo": "Pessoa Física",
+    "unidade": "por cliente",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1202",
+    "nome": "CARTÃO - Fornec. de 2ª via de cartão com função mov. conta de poupança",
+    "tipo": "Pessoa Física",
+    "unidade": "Por cliente",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1203",
+    "nome": "CHEQUE - Exclusão do Cadastro de Emitentes de Cheques sem Fundo (CCF)",
+    "tipo": "Pessoa Física",
+    "unidade": "Por Operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1204",
+    "nome": "CHEQUE - Contra-ordem e oposição ao pagamento de cheque",
+    "tipo": "Pessoa Física",
+    "unidade": "Por cheque",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1205",
+    "nome": "CHEQUE - Fornecimento de folhas de cheque",
+    "tipo": "Pessoa Física",
+    "unidade": "por cheque",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1206",
+    "nome": "CHEQUE - Cheque Administrativo",
+    "tipo": "Pessoa Física",
+    "unidade": "Por Cheque",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1209",
+    "nome": "Saque de conta de depósitos à vista e de poupança - SAQUE pessoal",
+    "tipo": "Pessoa Física",
+    "unidade": "Por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1210",
+    "nome": "Saque de conta de depósitos à vista e de poupança - SAQUE Terminal",
+    "tipo": "Pessoa Física",
+    "unidade": "Por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1211",
+    "nome": "Saque de conta de dep. à vista e de poupança - SAQUE correspondente",
+    "tipo": "Pessoa Física",
+    "unidade": "Por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1212",
+    "nome": "DEPÓSITO - Depósito Identificado",
+    "tipo": "Pessoa Física",
+    "unidade": "Por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1213",
+    "nome": "Forn. de ext. de um periodo conta dep. à vista e poup. - EXTRATO (P)",
+    "tipo": "Pessoa Física",
+    "unidade": "Por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1214",
+    "nome": "Forn. de ext. de um periodo conta dep. à vista e poup. - EXTRATO (E)",
+    "tipo": "Pessoa Física",
+    "unidade": "Por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1215",
+    "nome": "Forn. de ext. de um periodo conta dep. à vista e poup. - EXTRATO (C)",
+    "tipo": "Pessoa Física",
+    "unidade": "por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1216",
+    "nome": "Ext. mensal de conta de dep. à vista e poup. p/um período -EXTRATO(P)",
+    "tipo": "Pessoa Física",
+    "unidade": "Por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1217",
+    "nome": "Ext. mensal de conta de dep. à vista e Poup. p/um período - EXTRATO(E)",
+    "tipo": "Pessoa Física",
+    "unidade": "por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1218",
+    "nome": "Ext. mensal de conta de dep. à vista e poup. p/um período - EXTRATO(C)",
+    "tipo": "Pessoa Física",
+    "unidade": "por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1219",
+    "nome": "Fornecimento de cópia de microfilme, microficha ou assemelhado",
+    "tipo": "Pessoa Física",
+    "unidade": "por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1304",
+    "nome": "Transferência agendada por meio de DOC/TED - DOC/TED agendado(P)",
+    "tipo": "Pessoa Física",
+    "unidade": "por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1305",
+    "nome": "Transferência agendada por meio de DOC/TED - DOC/TED agendado(E)",
+    "tipo": "Pessoa Física",
+    "unidade": "por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1306",
+    "nome": "Transferência agendada por meio de DOC/TED - DOC/TED agendado(I)",
+    "tipo": "Pessoa Física",
+    "unidade": "por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1307",
+    "nome": "Transferência entre contas na própria instituição- TRANSF. RECURSOS(P)",
+    "tipo": "Pessoa Física",
+    "unidade": "Por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1308",
+    "nome": "Transferência entre contas na própria instituição-TRANSF.RECURSOS(E/I)",
+    "tipo": "Pessoa Física",
+    "unidade": "por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1310",
+    "nome": "Transferência por meio de DOC - DOC Pessoal",
+    "tipo": "Pessoa Física",
+    "unidade": "por evento",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1311",
+    "nome": "Transferência por meio de DOC - DOC eletrônico",
+    "tipo": "Pessoa Física",
+    "unidade": "por evento",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1312",
+    "nome": "Transferência por meio de DOC - DOC internet",
+    "tipo": "Pessoa Física",
+    "unidade": "por evento",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1313",
+    "nome": "Transferência por meio de TED - TED pessoal",
+    "tipo": "Pessoa Física",
+    "unidade": "por evento",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1314",
+    "nome": "Transferência por meio de TED - TED eletrônico",
+    "tipo": "Pessoa Física",
+    "unidade": "por evento",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1315",
+    "nome": "Transferência por meio de TED - TED internet",
+    "tipo": "Pessoa Física",
+    "unidade": "por evento",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1401",
+    "nome": "Concessão de adiantamento a depositante - ADIANT. DEPOSITANTE",
+    "tipo": "Pessoa Física",
+    "unidade": "Por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1501",
+    "nome": "PACOTE PADRONIZADO DE SERVIÇOS I",
+    "tipo": "Pessoa Física",
+    "unidade": "por cliente",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1502",
+    "nome": "PACOTE PADRONIZADO DE SERVIÇOS II",
+    "tipo": "Pessoa Física",
+    "unidade": "por cliente",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1503",
+    "nome": "PACOTE PADRONIZADO DE SERVIÇOS III",
+    "tipo": "Pessoa Física",
+    "unidade": "por cliente",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1504",
+    "nome": "PACOTE PADRONIZADO DE SERVIÇOS IV",
+    "tipo": "Pessoa Física",
+    "unidade": "por cliente",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1601",
+    "nome": "Anuidade - cartão básico nacional",
+    "tipo": "Pessoa Física",
+    "unidade": "a cada 365 dias",
+    "moeda": "Real",
+    "periodicidade": "A cada 360 dias"
+  },
+  {
+    "codigo": "1602",
+    "nome": "Fornecimento de 2ª via de cartão com função crédito",
+    "tipo": "Pessoa Física",
+    "unidade": "por evento",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1603",
+    "nome": "Utilização de canais de atend. para retirada em espécie - no país",
+    "tipo": "Pessoa Física",
+    "unidade": "por evento",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1605",
+    "nome": "Avaliação emergencial de crédito",
+    "tipo": "Pessoa Física",
+    "unidade": "por evento",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1607",
+    "nome": "Utilização de canais de atend. para retirada em espécie - no exterior",
+    "tipo": "Pessoa Física",
+    "unidade": "por evento",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1701",
+    "nome": "Venda de moeda estrangeira - espécie",
+    "tipo": "Pessoa Física",
+    "unidade": "Por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1702",
+    "nome": "Venda de moeda estrangeira - cheque de viagem",
+    "tipo": "Pessoa Física",
+    "unidade": "Por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1703",
+    "nome": "Venda de moeda estrangeira - cartão pré-pago - emissão e carga",
+    "tipo": "Pessoa Física",
+    "unidade": "Por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1704",
+    "nome": "Venda de moeda estrangeira - cartão pré-pago - recarga",
+    "tipo": "Pessoa Física",
+    "unidade": "Por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1706",
+    "nome": "Compra de moeda estrangeira - cheque de viagem",
+    "tipo": "Pessoa Física",
+    "unidade": "Por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1601",
+    "nome": "Anuidade - cartão básico nacional",
+    "tipo": "Pessoa Física",
+    "unidade": "a cada 365 dias",
+    "moeda": "Real",
+    "periodicidade": "A cada 365 dias"
+  },
+  {
+    "codigo": "1604",
+    "nome": "Pagamento de contas utilizando a função crédito em espécie",
+    "tipo": "Pessoa Física",
+    "unidade": "por evento",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1606",
+    "nome": "Anuidade - cartão básico internacional",
+    "tipo": "Pessoa Física",
+    "unidade": "a cada 365 dias",
+    "moeda": "Real",
+    "periodicidade": "A cada 365 dias"
+  },
+  {
+    "codigo": "1705",
+    "nome": "Compra de moeda estrangeira - espécie",
+    "tipo": "Pessoa Física",
+    "unidade": "Por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1707",
+    "nome": "Compra de moeda estrangeira - cartão pré-pago",
+    "tipo": "Pessoa Física",
+    "unidade": "Por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1606",
+    "nome": "Anuidade - cartão básico internacional",
+    "tipo": "Pessoa Física",
+    "unidade": "a cada 365 dias",
+    "moeda": "Real",
+    "periodicidade": "A cada 0 dias"
+  },
+  {
+    "codigo": "1208",
+    "nome": "CHEQUE - Cheque Visado",
+    "tipo": "Pessoa Física",
+    "unidade": "por cheque",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1309",
+    "nome": "Ordem de Pagamento - ORDEM PAGAMENTO",
+    "tipo": "Pessoa Física",
+    "unidade": "por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1606",
+    "nome": "Anuidade - cartão básico internacional",
+    "tipo": "Pessoa Física",
+    "unidade": "a cada 365 dias",
+    "moeda": "Real",
+    "periodicidade": "A cada 360 dias"
+  },
+  {
+    "codigo": "1601",
+    "nome": "Anuidade - cartão básico nacional",
+    "tipo": "Pessoa Física",
+    "unidade": "a cada 365 dias",
+    "moeda": "Real",
+    "periodicidade": "A cada 30 dias"
+  },
+  {
+    "codigo": "1606",
+    "nome": "Anuidade - cartão básico internacional",
+    "tipo": "Pessoa Física",
+    "unidade": "a cada 365 dias",
+    "moeda": "Real",
+    "periodicidade": "A cada 30 dias"
+  },
+  {
+    "codigo": "1601",
+    "nome": "Anuidade - cartão básico nacional",
+    "tipo": "Pessoa Física",
+    "unidade": "a cada 365 dias",
+    "moeda": "Real",
+    "periodicidade": "A cada 0 dias"
+  },
+  {
+    "codigo": "1601",
+    "nome": "Anuidade - cartão básico nacional",
+    "tipo": "Pessoa Física",
+    "unidade": "a cada 365 dias",
+    "moeda": "Real",
+    "periodicidade": "A cada 180 dias"
+  },
+  {
+    "codigo": "1601",
+    "nome": "Anuidade - cartão básico nacional",
+    "tipo": "Pessoa Física",
+    "unidade": "a cada 365 dias",
+    "moeda": "Real",
+    "periodicidade": "A cada 2190 dias"
+  },
+  {
+    "codigo": "1606",
+    "nome": "Anuidade - cartão básico internacional",
+    "tipo": "Pessoa Física",
+    "unidade": "a cada 365 dias",
+    "moeda": "Real",
+    "periodicidade": "A cada 2190 dias"
+  },
+  {
+    "codigo": "1207",
+    "nome": "CHEQUE - Cheque de transferência bancária_(TB e TBG)",
+    "tipo": "Pessoa Física",
+    "unidade": "por cheque",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1302",
+    "nome": "Transferência por meio de DOC/TED - DOC/TED eletrônico",
+    "tipo": "Pessoa Física",
+    "unidade": "por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1303",
+    "nome": "Transferência de recursos por meio de DOC/TED - DOC/TED internet",
+    "tipo": "Pessoa Física",
+    "unidade": "por operação",
+    "moeda": "Real",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1401",
+    "nome": "Concessão de adiantamento a depositante - ADIANT. DEPOSITANTE",
+    "tipo": "Pessoa Física",
+    "unidade": "Por operação",
+    "moeda": "Percentual",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1601",
+    "nome": "Anuidade - cartão básico nacional",
+    "tipo": "Pessoa Física",
+    "unidade": "a cada 365 dias",
+    "moeda": "Real",
+    "periodicidade": "A cada 45 dias"
+  },
+  {
+    "codigo": "1606",
+    "nome": "Anuidade - cartão básico internacional",
+    "tipo": "Pessoa Física",
+    "unidade": "a cada 365 dias",
+    "moeda": "Real",
+    "periodicidade": "A cada 45 dias"
+  },
+  {
+    "codigo": "1604",
+    "nome": "Pagamento de contas utilizando a função crédito em espécie",
+    "tipo": "Pessoa Física",
+    "unidade": "por evento",
+    "moeda": "Percentual",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1606",
+    "nome": "Anuidade - cartão básico internacional",
+    "tipo": "Pessoa Física",
+    "unidade": "a cada 365 dias",
+    "moeda": "Real",
+    "periodicidade": "A cada 180 dias"
+  },
+  {
+    "codigo": "1101",
+    "nome": "Confecção de cadastro para início de relacionamento - CADASTRO",
+    "tipo": "Pessoa Física",
+    "unidade": "Por cliente",
+    "moeda": "Percentual",
+    "periodicidade": "Por evento"
+  },
+  {
+    "codigo": "1501",
+    "nome": "PACOTE PADRONIZADO DE SERVIÇOS I",
+    "tipo": "Pessoa Física",
+    "unidade": "por cliente",
+    "moeda": "Percentual",
+    "periodicidade": "Por evento"
+  }
+]
