@@ -6,7 +6,7 @@ envs = dotenv_values('.env')
 def get_database_psql():
    try:
       conn = psycopg2.connect(
-         host="localhost",
+         host=envs['DB_HOST'],
          database=envs['DB_NAME'],
          user=envs['DB_USER'],
          password=envs['DB_PASS'])

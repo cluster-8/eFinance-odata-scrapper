@@ -21,59 +21,85 @@ def execute_query(query):
 # * POPULATE DATABASE      
 def insert_servicos_pf():
     try:
-        file = open('./json/services-2.json')
-        data = json.load(file)
-        cods = []
-        for i in data:
-            codigo, nome, tipo = i['codigo'], i['nome'], "F"
-            
-            if codigo in cods: continue
-            
-            conn = db.get_database_psql()
-            cur = conn.cursor()
-            cur.execute("INSERT INTO sp_servico (sp_codigo, sp_nome, sp_tipo) VALUES(%s, %s, %s)", (codigo, nome, tipo))
-            conn.commit()
-            cods.append(codigo)
-            cur.close()
-            conn.close()
+        instituicoes = get_data.get_all_instituicoes()
+        for i in instituicoes:
+            cnpj = i[4]
+            servicos = get_data.servicos_pf(cnpj)
+            cods = []
+            for i in servicos:
+                codigo, nome, tipo = i['CodigoServico'], i['Servico'], "F"
+                
+                if codigo in cods: continue
+                
+                conn = db.get_database_psql()
+                cur = conn.cursor()
+                cur.execute("INSERT INTO servicos (codigo, nome, tipo) VALUES(%s, %s, %s)", (codigo, nome, tipo))
+                conn.commit()
+                cods.append(codigo)
+                cur.close()
+                conn.close()
+                print(f"Inserindo serviço de pessoa física: {codigo} {nome}")
     except Exception as e:
         print(e)
 
 def insert_servicos_pj():
     try:
-        file = open('./json/services-pj-2.json')
-        data = json.load(file)
-        cods = []
-        for i in data:
-            codigo, nome, tipo = i['codigo'], i['nome'], "J"
-            if codigo in cods: continue
-            conn = db.get_database_psql()
-            cur = conn.cursor()
-            cur.execute("INSERT INTO sp_servico (sp_codigo, sp_nome, sp_tipo) VALUES(%s, %s, %s)", (codigo, nome, tipo))
-            conn.commit()
-            cods.append(codigo)
-            cur.close()
-            conn.close()
+        instituicoes = get_data.get_all_instituicoes()
+        for i in instituicoes:
+            cnpj = i[4]
+            servicos = get_data.servicos_pj(cnpj)
+            cods = []
+            for i in servicos:
+                codigo, nome, tipo = i['CodigoServico'], i['Servico'], "F"
+                
+                if codigo in cods: continue
+                
+                conn = db.get_database_psql()
+                cur = conn.cursor()
+                cur.execute("INSERT INTO servicos (codigo, nome, tipo) VALUES(%s, %s, %s)", (codigo, nome, tipo))
+                conn.commit()
+                cods.append(codigo)
+                cur.close()
+                conn.close()
+                print(f"Inserindo serviço de pessoa física: {codigo} {nome}")
     except Exception as e:
         print(e)
         
 def insert_instituicoes():
     try:
-        file = open('./json/instituicoes-2.json')
-        data = json.load(file)
+        instituicoes = get_data.instituicoes()
         cnpjs = []
-        for i in data:
-            nome, cnpj, formatado = i['nome'], i['cnpj'], i['cnpj_formatado']
+        for i in instituicoes:
+            nome, cnpj = i['NomeInstituicao'], str(i['CnpjInstituicao'])
+            existe_no_banco = get_data.get_instituicao_by_cnpj(cnpj)
+            if existe_no_banco: 
+                print(f"Instituição já registrada no banco: CNPJ {cnpj}")
+                continue
+            ultimo_caractere = len(cnpj) - 1
+            formatado = cnpj
+            tarifas_pf = tarifas_pj = None
+            print(formatado)
+            while ultimo_caractere > 0 and (not tarifas_pf or not tarifas_pj):
+                formatado = cnpj[:ultimo_caractere]
+                ultimo_caractere = ultimo_caractere - 1
+                tarifas_pf = get_data.tarifas_pf(formatado)
+                tarifas_pj = get_data.tarifas_pj(formatado)
             
             if cnpj in cnpjs: continue
-            
-            conn = db.get_database_psql()
-            cur = conn.cursor()
-            cur.execute("INSERT INTO if_instituicao (if_nome, if_cnpj, if_cnpj_formatado) VALUES(%s, %s, %s)", (nome, cnpj, formatado))
-            conn.commit()
-            cur.close()
-            conn.close()
-            cnpjs.append(cnpj)
+           
+            try:
+                if len(formatado) == 1: formatado = None
+                conn = db.get_database_psql()
+                cur = conn.cursor()
+                cur.execute("INSERT INTO instituicoes (nome, cnpj, cnpj_formatado) VALUES(%s, %s, %s)", (nome, cnpj, formatado))
+
+                conn.commit()
+                cur.close()
+                conn.close()
+                cnpjs.append(cnpj)
+                print(f"Inserindo Insituição: {nome} {cnpj}")
+            except Exception as e:
+                    print(e)
     except Exception as e:
         print(e)
         

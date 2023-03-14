@@ -17,10 +17,10 @@ def instituicoes():
 # ? tarifas
 def tarifas_pf(if_cnpj):
     
-    pessoa = 'J'
+    pessoa = 'F'
     # cnpj = if_cnpj[:9]
-    cnpj = str(if_cnpj)[:8]
-    # cnpj = str(if_cnpj)
+    # cnpj = str(if_cnpj)[:8]
+    cnpj = str(if_cnpj)
     
     url = f"https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaTarifasPorInstituicaoFinanceira(PessoaFisicaOuJuridica=@PessoaFisicaOuJuridica,CNPJ=@CNPJ)?@PessoaFisicaOuJuridica='{pessoa}'&@CNPJ='{cnpj}'&$top=10000&$format=json&$select=CodigoServico,Servico,Unidade,DataVigencia,ValorMaximo,TipoValor,Periodicidade"
     
@@ -36,7 +36,7 @@ def tarifas_pf(if_cnpj):
         
 def tarifas_pj(if_cnpj):
     
-    pessoa = 'F'
+    pessoa = 'J'
     cnpj = str(if_cnpj)
     
     url = f"https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaTarifasPorInstituicaoFinanceira(PessoaFisicaOuJuridica=@PessoaFisicaOuJuridica,CNPJ=@CNPJ)?@PessoaFisicaOuJuridica='{pessoa}'&@CNPJ='{cnpj}'&$top=10000&$format=json&$select=CodigoServico,Servico,Unidade,DataVigencia,ValorMaximo,TipoValor,Periodicidade"
@@ -156,3 +156,14 @@ def get_all_instituicoes():
         return res
     except Exception as e:
         print(f"Get Serviço error: {e}")
+        
+def get_instituicao_by_cnpj(cnpj):
+    try:
+        conn = db.get_database_psql()
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM instituicoes WHERE cnpj = %s", [cnpj,])
+        res = cur.fetchall()
+        cur.close()
+        return res
+    except Exception as e:
+        print(f"Get Instituição error: {e}")

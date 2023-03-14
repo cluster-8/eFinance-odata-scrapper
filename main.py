@@ -17,7 +17,11 @@ def run_test():
     # populate.insert_servicos_pj()
     # populate.insert_tarifas_pj()
     
-    populate.insert_tarifas()
+    
+    populate.insert_instituicoes()
+    # populate.insert_servicos_pf()
+    # populate.insert_servicos_pj()
+    # populate.insert_tarifas()
         
 if __name__ == "__main__":
     run_test()
