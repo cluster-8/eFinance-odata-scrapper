@@ -205,6 +205,47 @@ def tarifas_pf():
         
     except Exception as e:
         print(f'{datetime.datetime.now()} - Erro: {e}')
+
+def tarifas_pj():
+    '''
+        Rertorna as tarifas para serviços pessoa jurídica
+    '''
+    print(f'{datetime.datetime.now()} - criando tarifas-pj.json.')
+    try:
+        ifs = get_data.get_all_instituicoes()
+        aux = []
+        for idx in ifs:
+            instituicao_id = idx[0]
+            cnpj_formatado = idx[4]
+            tarifas = get_data.tarifas_pj(cnpj_formatado)
+            
+            if not tarifas: 
+                print(f'{datetime.datetime.now()} - nenhuma tarifa encontrada para instituicão de CNPJ: {cnpj_formatado}')
+                continue
+            else:
+                for t in tarifas:
+                    cod_servico = t['CodigoServico']
+                    servico = get_data.get_servico_id_by_codigo(cod_servico)
+                    servico_id = servico[0]
+                    
+                    obj = {
+                        "servico_id": servico_id,
+                        "instituicao_id": instituicao_id,
+                        "valor_maximo": t['ValorMaximo'],
+                        "data_vigencia": t['DataVigencia'],
+                        "unidade": t['Unidade'],
+                        "periodicidade": t['Periodicidade'],
+                        "moeda": t['TipoValor']
+                    }
+                    
+                    if obj not in aux: aux.append(obj)
+                    json_string = [ob for ob in aux]
+                    with open('./json/tarifas-pj.json', 'w', encoding='utf-8') as f:
+                        json.dump(json_string, f, ensure_ascii=False)
+                    f.close()
+        
+    except Exception as e:
+        print(f'{datetime.datetime.now()} - Erro: {e}')
         
 def get_cnpj_formatado(cnpj):
     '''

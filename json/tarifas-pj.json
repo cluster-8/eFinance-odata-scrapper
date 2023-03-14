@@ -1,0 +1,1865 @@
+[
+  {
+    "servico_id": "7390b8fd-ca54-4abb-853d-001489dc2bab",
+    "instituicao_id": "dda67670-392c-47ae-8bc2-e5d5b055e908",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2010-09-13",
+    "unidade": "Por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "b04dd77c-8215-421f-bc65-568c2d7a970f",
+    "instituicao_id": "dda67670-392c-47ae-8bc2-e5d5b055e908",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2012-06-19",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "c9cd7b03-8104-46e8-bde5-771e71dfd5db",
+    "instituicao_id": "dda67670-392c-47ae-8bc2-e5d5b055e908",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2012-06-19",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "07f316b5-0bdd-44c7-a0ae-fcd27374fc35",
+    "instituicao_id": "dda67670-392c-47ae-8bc2-e5d5b055e908",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2012-06-19",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "da7c3b73-94b3-4160-9f06-4ba335fc0cd4",
+    "instituicao_id": "dda67670-392c-47ae-8bc2-e5d5b055e908",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2012-06-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "d8028050-66d8-4ca6-a0aa-afae01123573",
+    "instituicao_id": "dda67670-392c-47ae-8bc2-e5d5b055e908",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2012-06-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "1186b7c4-6f3d-4c55-8058-6c89c1648004",
+    "instituicao_id": "dda67670-392c-47ae-8bc2-e5d5b055e908",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2012-06-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "8bb4477e-e4e0-40f3-97e6-b95f2895d7d2",
+    "instituicao_id": "dda67670-392c-47ae-8bc2-e5d5b055e908",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2012-06-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "8e267fdc-ddb2-43bc-82c4-422a7743d031",
+    "instituicao_id": "dda67670-392c-47ae-8bc2-e5d5b055e908",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2012-06-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "7390b8fd-ca54-4abb-853d-001489dc2bab",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 30.0,
+    "data_vigencia": "2010-06-01",
+    "unidade": "Por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "16613de2-77a7-4f3e-88e0-24d3076f7839",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 8.1,
+    "data_vigencia": "2018-01-01",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "016f055f-f638-49b5-822d-b3d7c165e25b",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 8.1,
+    "data_vigencia": "2018-01-01",
+    "unidade": "Por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "1c7eb005-2cbc-4953-8d6d-c5a5f7371858",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 56.25,
+    "data_vigencia": "2023-02-01",
+    "unidade": "Por Operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "76e39330-e616-429a-95e1-d1f7edb6a397",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 15.45,
+    "data_vigencia": "2022-10-01",
+    "unidade": "Por cheque",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "0fb9e0f2-a555-4b69-b3eb-b7d664dce912",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 2.1,
+    "data_vigencia": "2023-02-01",
+    "unidade": "por cheque",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5baa8ada-96ed-48f9-a751-d8295b496da4",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 36.75,
+    "data_vigencia": "2022-04-01",
+    "unidade": "Por Cheque",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "0d0d3535-da25-4cb8-86f2-31c44d980b00",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 3.3,
+    "data_vigencia": "2023-02-01",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "eca71f67-dfbb-4a3d-9a20-8693de23f91d",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 3.0,
+    "data_vigencia": "2023-02-01",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "b4fa75cc-9ab4-4ed4-bd61-2fcf3ed3bbec",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 3.0,
+    "data_vigencia": "2023-02-01",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "7ef14878-36ea-408d-91b0-79ad85d91b9e",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 8.45,
+    "data_vigencia": "2022-08-01",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "ac3632d4-2b3e-485c-beb5-117250477df8",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 3.4,
+    "data_vigencia": "2022-10-01",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "c15aa99e-3566-43ab-9e24-76bd2ba35692",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 3.35,
+    "data_vigencia": "2022-04-01",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5c05d4ab-a40a-4d71-8d2c-c8f931e48efc",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 1.5,
+    "data_vigencia": "2022-06-01",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "66995251-e1a5-48eb-9b83-16bd640006e1",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 3.4,
+    "data_vigencia": "2022-10-01",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "9bddbe55-ef2a-48de-8e18-475beef129cd",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 3.25,
+    "data_vigencia": "2022-04-01",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "36ead75b-f3ac-4f0e-9332-0ea062917282",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 1.5,
+    "data_vigencia": "2022-06-01",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5f106c27-5f60-4cab-af69-14476307c926",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 8.75,
+    "data_vigencia": "2022-04-01",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "7c8b2f75-b7b7-4e31-8e06-b39535b79e1c",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 22.7,
+    "data_vigencia": "2023-02-01",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "3e6977a9-0415-4f80-84e6-c9add1ae4034",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 11.75,
+    "data_vigencia": "2023-02-01",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "ecd3f283-fd2d-4a60-8fbe-5580f94dba00",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 11.75,
+    "data_vigencia": "2023-02-01",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "b1e7e915-0cad-4861-99c0-d35c31669988",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 1.7,
+    "data_vigencia": "2022-08-01",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "3da68355-5802-4dfc-b204-1168374bf50e",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 1.4,
+    "data_vigencia": "2022-08-01",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "9a1e1a36-4cc0-4a18-a5a2-82b79463d22f",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 22.7,
+    "data_vigencia": "2023-02-01",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "b04dd77c-8215-421f-bc65-568c2d7a970f",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 11.75,
+    "data_vigencia": "2023-02-01",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "525302a8-a534-45e0-a44f-18953a082fc1",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 11.75,
+    "data_vigencia": "2023-02-01",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5e2b869f-9b59-4111-895a-d4d06033ca2d",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 22.7,
+    "data_vigencia": "2023-02-01",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "c9cd7b03-8104-46e8-bde5-771e71dfd5db",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 11.75,
+    "data_vigencia": "2023-02-01",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "0f60cfb3-fb04-45d1-87fb-d9d2b5df0b17",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 11.75,
+    "data_vigencia": "2023-02-01",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5ff5781e-2e24-4ab7-80c3-1c0b7160bb0a",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 58.7,
+    "data_vigencia": "2017-12-01",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "c8f64b95-b615-4064-82ee-650659a3f00a",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 15.45,
+    "data_vigencia": "2023-02-01",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "e32fb258-6e1d-4209-a2d1-bfbbe8776ad6",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 24.85,
+    "data_vigencia": "2023-02-01",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "75fdd310-b201-4fd4-9f6a-e10231795f04",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 32.7,
+    "data_vigencia": "2023-02-01",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "18988f2b-08cd-450b-9850-17aa03ab282e",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 50.3,
+    "data_vigencia": "2022-08-01",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "8c9aad94-b75e-4e28-85d9-2ccf14831c77",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 76.8,
+    "data_vigencia": "2022-12-19",
+    "unidade": "a cada 365 dias",
+    "periodicidade": "A cada 365 dias",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "07f316b5-0bdd-44c7-a0ae-fcd27374fc35",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2020-01-01",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "62bb9b5f-8209-4166-8834-745dd382bcba",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 15.0,
+    "data_vigencia": "2018-04-15",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "9b1e630c-8ed6-4c31-9031-d4f1b1ac4ba1",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 16.0,
+    "data_vigencia": "2018-04-15",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "ebccf9a2-7510-4926-b8d7-f491e01ac925",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2022-02-18",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "37246802-41aa-4e64-a743-7495afdc33ca",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 93.6,
+    "data_vigencia": "2022-12-19",
+    "unidade": "a cada 365 dias",
+    "periodicidade": "A cada 365 dias",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "f8b7be01-0c66-414a-aedc-3f03c6b26987",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 25.0,
+    "data_vigencia": "2019-04-15",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "da7c3b73-94b3-4160-9f06-4ba335fc0cd4",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 30.0,
+    "data_vigencia": "2016-10-01",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "1186b7c4-6f3d-4c55-8058-6c89c1648004",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 25.0,
+    "data_vigencia": "2013-05-01",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "8bb4477e-e4e0-40f3-97e6-b95f2895d7d2",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 25.0,
+    "data_vigencia": "2013-05-01",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "b201373d-7488-4594-8bae-8c26f53776af",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 30.0,
+    "data_vigencia": "2016-10-01",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "8e267fdc-ddb2-43bc-82c4-422a7743d031",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 25.0,
+    "data_vigencia": "2013-05-01",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "4bf697a3-dfe0-4a03-94eb-3fa0860c3a47",
+    "instituicao_id": "0bae49ed-4122-43a5-8e87-2b44578235bf",
+    "valor_maximo": 25.0,
+    "data_vigencia": "2013-05-01",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "7390b8fd-ca54-4abb-853d-001489dc2bab",
+    "instituicao_id": "747b4d0e-438c-42cb-be5a-f8db4fac2f11",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2020-10-02",
+    "unidade": "Por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "7390b8fd-ca54-4abb-853d-001489dc2bab",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-07-02",
+    "unidade": "Por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "16613de2-77a7-4f3e-88e0-24d3076f7839",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "016f055f-f638-49b5-822d-b3d7c165e25b",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "Por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "1c7eb005-2cbc-4953-8d6d-c5a5f7371858",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "Por Operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "76e39330-e616-429a-95e1-d1f7edb6a397",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "Por cheque",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "0fb9e0f2-a555-4b69-b3eb-b7d664dce912",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "por cheque",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5baa8ada-96ed-48f9-a751-d8295b496da4",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "Por Cheque",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "1cdaa314-4d53-469a-8f48-f7ef05d347e5",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "por cheque",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "0d0d3535-da25-4cb8-86f2-31c44d980b00",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "eca71f67-dfbb-4a3d-9a20-8693de23f91d",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "b4fa75cc-9ab4-4ed4-bd61-2fcf3ed3bbec",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "7ef14878-36ea-408d-91b0-79ad85d91b9e",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "ac3632d4-2b3e-485c-beb5-117250477df8",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "c15aa99e-3566-43ab-9e24-76bd2ba35692",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5c05d4ab-a40a-4d71-8d2c-c8f931e48efc",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "66995251-e1a5-48eb-9b83-16bd640006e1",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "9bddbe55-ef2a-48de-8e18-475beef129cd",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "36ead75b-f3ac-4f0e-9332-0ea062917282",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5f106c27-5f60-4cab-af69-14476307c926",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "7c8b2f75-b7b7-4e31-8e06-b39535b79e1c",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "3e6977a9-0415-4f80-84e6-c9add1ae4034",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "ecd3f283-fd2d-4a60-8fbe-5580f94dba00",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "b1e7e915-0cad-4861-99c0-d35c31669988",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "3da68355-5802-4dfc-b204-1168374bf50e",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "f52a7f5c-77ed-4954-a3be-4d2b2cf7b28e",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2008-12-19",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "9a1e1a36-4cc0-4a18-a5a2-82b79463d22f",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2021-06-10",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "b04dd77c-8215-421f-bc65-568c2d7a970f",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2021-06-10",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "525302a8-a534-45e0-a44f-18953a082fc1",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2021-06-10",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5e2b869f-9b59-4111-895a-d4d06033ca2d",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2021-06-10",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "c9cd7b03-8104-46e8-bde5-771e71dfd5db",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2021-06-10",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "0f60cfb3-fb04-45d1-87fb-d9d2b5df0b17",
+    "instituicao_id": "c5b843e6-cb71-41c0-adc1-2c4a208fe282",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2021-06-10",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "7390b8fd-ca54-4abb-853d-001489dc2bab",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 30.0,
+    "data_vigencia": "2018-07-29",
+    "unidade": "Por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "16613de2-77a7-4f3e-88e0-24d3076f7839",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 10.4,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "016f055f-f638-49b5-822d-b3d7c165e25b",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 10.4,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "1c7eb005-2cbc-4953-8d6d-c5a5f7371858",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 60.22,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por Operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "76e39330-e616-429a-95e1-d1f7edb6a397",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 14.9,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por cheque",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "0fb9e0f2-a555-4b69-b3eb-b7d664dce912",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 2.1,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por cheque",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "0d0d3535-da25-4cb8-86f2-31c44d980b00",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 3.5,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "eca71f67-dfbb-4a3d-9a20-8693de23f91d",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 3.1,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "b4fa75cc-9ab4-4ed4-bd61-2fcf3ed3bbec",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 3.1,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "7ef14878-36ea-408d-91b0-79ad85d91b9e",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 8.5,
+    "data_vigencia": "2015-08-02",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "ac3632d4-2b3e-485c-beb5-117250477df8",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 3.4,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "c15aa99e-3566-43ab-9e24-76bd2ba35692",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 3.3,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5c05d4ab-a40a-4d71-8d2c-c8f931e48efc",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 1.55,
+    "data_vigencia": "2022-03-03",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "66995251-e1a5-48eb-9b83-16bd640006e1",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 3.4,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "9bddbe55-ef2a-48de-8e18-475beef129cd",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 3.4,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "36ead75b-f3ac-4f0e-9332-0ea062917282",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 1.7,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5f106c27-5f60-4cab-af69-14476307c926",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 7.75,
+    "data_vigencia": "2019-07-26",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "b1e7e915-0cad-4861-99c0-d35c31669988",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 7.4,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "3da68355-5802-4dfc-b204-1168374bf50e",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 1.4,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "f52a7f5c-77ed-4954-a3be-4d2b2cf7b28e",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 41.7,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "9a1e1a36-4cc0-4a18-a5a2-82b79463d22f",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 23.5,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "b04dd77c-8215-421f-bc65-568c2d7a970f",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 11.8,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "525302a8-a534-45e0-a44f-18953a082fc1",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 11.8,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5e2b869f-9b59-4111-895a-d4d06033ca2d",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 23.5,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "c9cd7b03-8104-46e8-bde5-771e71dfd5db",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 11.8,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "0f60cfb3-fb04-45d1-87fb-d9d2b5df0b17",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 11.8,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5ff5781e-2e24-4ab7-80c3-1c0b7160bb0a",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 59.9,
+    "data_vigencia": "2019-07-26",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "c8f64b95-b615-4064-82ee-650659a3f00a",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 14.6,
+    "data_vigencia": "2022-03-03",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "e32fb258-6e1d-4209-a2d1-bfbbe8776ad6",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 24.0,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "75fdd310-b201-4fd4-9f6a-e10231795f04",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 32.0,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "18988f2b-08cd-450b-9850-17aa03ab282e",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 49.5,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "8c9aad94-b75e-4e28-85d9-2ccf14831c77",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 73.2,
+    "data_vigencia": "2021-01-18",
+    "unidade": "a cada 365 dias",
+    "periodicidade": "A cada 360 dias",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "07f316b5-0bdd-44c7-a0ae-fcd27374fc35",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 8.5,
+    "data_vigencia": "2016-07-09",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "62bb9b5f-8209-4166-8834-745dd382bcba",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 15.0,
+    "data_vigencia": "2021-01-18",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "9b1e630c-8ed6-4c31-9031-d4f1b1ac4ba1",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 9.9,
+    "data_vigencia": "2021-01-18",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "ebccf9a2-7510-4926-b8d7-f491e01ac925",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 19.0,
+    "data_vigencia": "2021-01-18",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "37246802-41aa-4e64-a743-7495afdc33ca",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 73.2,
+    "data_vigencia": "2021-01-18",
+    "unidade": "a cada 365 dias",
+    "periodicidade": "A cada 360 dias",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "f8b7be01-0c66-414a-aedc-3f03c6b26987",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 25.0,
+    "data_vigencia": "2021-01-18",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "da7c3b73-94b3-4160-9f06-4ba335fc0cd4",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 80.0,
+    "data_vigencia": "2016-10-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "1186b7c4-6f3d-4c55-8058-6c89c1648004",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 50.0,
+    "data_vigencia": "2016-10-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "8bb4477e-e4e0-40f3-97e6-b95f2895d7d2",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 50.0,
+    "data_vigencia": "2016-10-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "b201373d-7488-4594-8bae-8c26f53776af",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 80.0,
+    "data_vigencia": "2016-10-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "8e267fdc-ddb2-43bc-82c4-422a7743d031",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 80.0,
+    "data_vigencia": "2016-10-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "4bf697a3-dfe0-4a03-94eb-3fa0860c3a47",
+    "instituicao_id": "d808fed4-7fb0-4e9a-8e05-c8a7ebc9b55d",
+    "valor_maximo": 50.0,
+    "data_vigencia": "2016-10-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "7390b8fd-ca54-4abb-853d-001489dc2bab",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 30.0,
+    "data_vigencia": "2018-07-29",
+    "unidade": "Por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "16613de2-77a7-4f3e-88e0-24d3076f7839",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 10.4,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "016f055f-f638-49b5-822d-b3d7c165e25b",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 10.4,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "1c7eb005-2cbc-4953-8d6d-c5a5f7371858",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 60.22,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por Operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "76e39330-e616-429a-95e1-d1f7edb6a397",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 14.9,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por cheque",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "0fb9e0f2-a555-4b69-b3eb-b7d664dce912",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 2.1,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por cheque",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "0d0d3535-da25-4cb8-86f2-31c44d980b00",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 3.5,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "eca71f67-dfbb-4a3d-9a20-8693de23f91d",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 3.1,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "b4fa75cc-9ab4-4ed4-bd61-2fcf3ed3bbec",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 3.1,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "7ef14878-36ea-408d-91b0-79ad85d91b9e",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 8.5,
+    "data_vigencia": "2015-08-02",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "ac3632d4-2b3e-485c-beb5-117250477df8",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 3.4,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "c15aa99e-3566-43ab-9e24-76bd2ba35692",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 3.3,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5c05d4ab-a40a-4d71-8d2c-c8f931e48efc",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 1.55,
+    "data_vigencia": "2022-03-03",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "66995251-e1a5-48eb-9b83-16bd640006e1",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 3.4,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "9bddbe55-ef2a-48de-8e18-475beef129cd",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 3.4,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "36ead75b-f3ac-4f0e-9332-0ea062917282",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 1.7,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5f106c27-5f60-4cab-af69-14476307c926",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 7.75,
+    "data_vigencia": "2019-07-26",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "b1e7e915-0cad-4861-99c0-d35c31669988",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 7.4,
+    "data_vigencia": "2022-12-05",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "3da68355-5802-4dfc-b204-1168374bf50e",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 1.4,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "f52a7f5c-77ed-4954-a3be-4d2b2cf7b28e",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 41.7,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "9a1e1a36-4cc0-4a18-a5a2-82b79463d22f",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 23.5,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "b04dd77c-8215-421f-bc65-568c2d7a970f",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 11.8,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "525302a8-a534-45e0-a44f-18953a082fc1",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 11.8,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5e2b869f-9b59-4111-895a-d4d06033ca2d",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 23.5,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "c9cd7b03-8104-46e8-bde5-771e71dfd5db",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 11.8,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "0f60cfb3-fb04-45d1-87fb-d9d2b5df0b17",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 11.8,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5ff5781e-2e24-4ab7-80c3-1c0b7160bb0a",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 59.9,
+    "data_vigencia": "2019-07-26",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "c8f64b95-b615-4064-82ee-650659a3f00a",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 14.6,
+    "data_vigencia": "2022-03-03",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "e32fb258-6e1d-4209-a2d1-bfbbe8776ad6",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 24.0,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "75fdd310-b201-4fd4-9f6a-e10231795f04",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 32.0,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "18988f2b-08cd-450b-9850-17aa03ab282e",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 49.5,
+    "data_vigencia": "2022-12-05",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "8c9aad94-b75e-4e28-85d9-2ccf14831c77",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 73.2,
+    "data_vigencia": "2021-01-18",
+    "unidade": "a cada 365 dias",
+    "periodicidade": "A cada 360 dias",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "07f316b5-0bdd-44c7-a0ae-fcd27374fc35",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 8.5,
+    "data_vigencia": "2016-07-09",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "62bb9b5f-8209-4166-8834-745dd382bcba",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 15.0,
+    "data_vigencia": "2021-01-18",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "9b1e630c-8ed6-4c31-9031-d4f1b1ac4ba1",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 9.9,
+    "data_vigencia": "2021-01-18",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "ebccf9a2-7510-4926-b8d7-f491e01ac925",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 19.0,
+    "data_vigencia": "2021-01-18",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "37246802-41aa-4e64-a743-7495afdc33ca",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 73.2,
+    "data_vigencia": "2021-01-18",
+    "unidade": "a cada 365 dias",
+    "periodicidade": "A cada 360 dias",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "f8b7be01-0c66-414a-aedc-3f03c6b26987",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 25.0,
+    "data_vigencia": "2021-01-18",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "da7c3b73-94b3-4160-9f06-4ba335fc0cd4",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 80.0,
+    "data_vigencia": "2016-10-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "1186b7c4-6f3d-4c55-8058-6c89c1648004",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 50.0,
+    "data_vigencia": "2016-10-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "8bb4477e-e4e0-40f3-97e6-b95f2895d7d2",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 50.0,
+    "data_vigencia": "2016-10-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "b201373d-7488-4594-8bae-8c26f53776af",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 80.0,
+    "data_vigencia": "2016-10-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "8e267fdc-ddb2-43bc-82c4-422a7743d031",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 80.0,
+    "data_vigencia": "2016-10-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "4bf697a3-dfe0-4a03-94eb-3fa0860c3a47",
+    "instituicao_id": "e6a66045-f054-4918-821e-b51d311e167f",
+    "valor_maximo": 50.0,
+    "data_vigencia": "2016-10-19",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "7390b8fd-ca54-4abb-853d-001489dc2bab",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 850.0,
+    "data_vigencia": "2022-04-09",
+    "unidade": "Por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "16613de2-77a7-4f3e-88e0-24d3076f7839",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 17.0,
+    "data_vigencia": "2020-01-01",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "1c7eb005-2cbc-4953-8d6d-c5a5f7371858",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 35.0,
+    "data_vigencia": "2012-05-01",
+    "unidade": "Por Operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "76e39330-e616-429a-95e1-d1f7edb6a397",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2012-05-01",
+    "unidade": "Por cheque",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "0fb9e0f2-a555-4b69-b3eb-b7d664dce912",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2012-05-01",
+    "unidade": "por cheque",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5baa8ada-96ed-48f9-a751-d8295b496da4",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 40.0,
+    "data_vigencia": "2012-05-01",
+    "unidade": "Por Cheque",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "0d0d3535-da25-4cb8-86f2-31c44d980b00",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2013-11-06",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "eca71f67-dfbb-4a3d-9a20-8693de23f91d",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 15.0,
+    "data_vigencia": "2020-01-01",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "b4fa75cc-9ab4-4ed4-bd61-2fcf3ed3bbec",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 15.0,
+    "data_vigencia": "2020-01-01",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "ac3632d4-2b3e-485c-beb5-117250477df8",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 2.0,
+    "data_vigencia": "2008-05-03",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "c15aa99e-3566-43ab-9e24-76bd2ba35692",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 2.0,
+    "data_vigencia": "2008-05-03",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5c05d4ab-a40a-4d71-8d2c-c8f931e48efc",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 2.0,
+    "data_vigencia": "2008-05-03",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "66995251-e1a5-48eb-9b83-16bd640006e1",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 2.0,
+    "data_vigencia": "2008-05-03",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "9bddbe55-ef2a-48de-8e18-475beef129cd",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 2.0,
+    "data_vigencia": "2008-05-03",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "36ead75b-f3ac-4f0e-9332-0ea062917282",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 2.0,
+    "data_vigencia": "2008-05-03",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5f106c27-5f60-4cab-af69-14476307c926",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 10.0,
+    "data_vigencia": "2012-05-01",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "3e6977a9-0415-4f80-84e6-c9add1ae4034",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2020-01-01",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "b1e7e915-0cad-4861-99c0-d35c31669988",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2013-11-06",
+    "unidade": "Por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "3da68355-5802-4dfc-b204-1168374bf50e",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2020-01-01",
+    "unidade": "por operação",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "5e2b869f-9b59-4111-895a-d4d06033ca2d",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 15.0,
+    "data_vigencia": "2012-05-01",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "c9cd7b03-8104-46e8-bde5-771e71dfd5db",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 15.0,
+    "data_vigencia": "2020-01-01",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "c8f64b95-b615-4064-82ee-650659a3f00a",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 20.0,
+    "data_vigencia": "2020-01-01",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "e32fb258-6e1d-4209-a2d1-bfbbe8776ad6",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 26.0,
+    "data_vigencia": "2020-01-01",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "75fdd310-b201-4fd4-9f6a-e10231795f04",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 44.0,
+    "data_vigencia": "2020-01-01",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "18988f2b-08cd-450b-9850-17aa03ab282e",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 54.0,
+    "data_vigencia": "2020-01-01",
+    "unidade": "por cliente",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "07f316b5-0bdd-44c7-a0ae-fcd27374fc35",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 17.0,
+    "data_vigencia": "2020-02-17",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "62bb9b5f-8209-4166-8834-745dd382bcba",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 18.15,
+    "data_vigencia": "2020-02-17",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "9b1e630c-8ed6-4c31-9031-d4f1b1ac4ba1",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 4.9,
+    "data_vigencia": "2011-08-14",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "ebccf9a2-7510-4926-b8d7-f491e01ac925",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 18.9,
+    "data_vigencia": "2015-05-15",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "37246802-41aa-4e64-a743-7495afdc33ca",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 0.0,
+    "data_vigencia": "2020-01-01",
+    "unidade": "a cada 365 dias",
+    "periodicidade": "A cada 0 dias",
+    "moeda": "Real"
+  },
+  {
+    "servico_id": "f8b7be01-0c66-414a-aedc-3f03c6b26987",
+    "instituicao_id": "52855c01-a1b2-4865-bd27-e3cc3994638d",
+    "valor_maximo": 40.0,
+    "data_vigencia": "2011-08-14",
+    "unidade": "por evento",
+    "periodicidade": "Por evento",
+    "moeda": "Real"
+  }
+]

@@ -14,9 +14,10 @@ def instituicoes():
     except Exception as e:
         print("Erro na busca por Instituições Financeiras:", e)
  
+# ? tarifas
 def tarifas_pf(if_cnpj):
     
-    pessoa = 'F'
+    pessoa = 'J'
     # cnpj = if_cnpj[:9]
     cnpj = str(if_cnpj)[:8]
     # cnpj = str(if_cnpj)
@@ -31,8 +32,25 @@ def tarifas_pf(if_cnpj):
             return result.json()['value']
         
     except Exception as e:
-        print("Erro ao buscar tarifas por id:", e)
+        print("Erro ao buscar tarifas pessoa física por id:", e)
+        
+def tarifas_pj(if_cnpj):
+    
+    pessoa = 'F'
+    cnpj = str(if_cnpj)
+    
+    url = f"https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaTarifasPorInstituicaoFinanceira(PessoaFisicaOuJuridica=@PessoaFisicaOuJuridica,CNPJ=@CNPJ)?@PessoaFisicaOuJuridica='{pessoa}'&@CNPJ='{cnpj}'&$top=10000&$format=json&$select=CodigoServico,Servico,Unidade,DataVigencia,ValorMaximo,TipoValor,Periodicidade"
+    
+    try:
 
+        result = requests.get(url)
+        if len(result.json()['value']) > 0:
+            return result.json()['value']
+        
+    except Exception as e:
+        print("Erro ao buscar tarifas pessoa jurídica por id:", e)
+
+# ? grupo
 def grupos():
     try:
         url = "https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/GruposConsolidados?%24format=json"
@@ -41,6 +59,7 @@ def grupos():
     except Exception as e:
         print(f'Get Grupos Consolidados error: {e}')
 
+# ? serviços
 def servicos_pf(if_cnpj):
     try:
         last = len(str(if_cnpj))
@@ -89,6 +108,7 @@ def servicos_pj(if_cnpj):
     except Exception as e:
         print(f"Get IF Services error: {e}")
 
+# ? instituições
 def get_instituicoes_by_grupo(grupo_codigo):
     try:
         url = f"https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaInstituicoesDeGrupoConsolidado(CodigoGrupoConsolidado=@CodigoGrupoConsolidado)?%40CodigoGrupoConsolidado={grupo_codigo}&%24format=json"

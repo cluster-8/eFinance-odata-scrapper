@@ -1,0 +1,16 @@
+{'CodigoServico': '1101', 
+'Servico': 'Confecção de cadastro para início de relacionamento - CADASTRO', 
+'Unidade': 'Por cliente', 
+'DataVigencia': '2020-10-02', 
+'ValorMaximo': 0.0, 
+'TipoValor': 'Real', 
+'Periodicidade': 'Por evento'} 
+
+{'servico_id': '7390b8fd-ca54-4abb-853d-001489dc2bab', 
+'instituicao_id': '747b4d0e-438c-42cb-be5a-f8db4fac2f11',
+ 'valor_maximo': 0.0, 
+ 'data_vigencia': '2020-10-02', 
+ 'unidade': 'Por cliente'}
+
+
+ tarifas pf - total de registro de tarifas no banco = 16156

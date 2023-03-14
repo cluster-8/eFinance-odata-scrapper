@@ -1,5 +1,6 @@
 import db
 import json
+import get_data
 
 def execute_query(query):
     
@@ -76,47 +77,52 @@ def insert_instituicoes():
     except Exception as e:
         print(e)
         
-def insert_tarifas_pf():
+def insert_tarifas():
     try:
-        file = open('./json/tarifas-pf.json')
-        data = json.load(file)
-        tarifas_inseridas = []
-        for i in data:
-            
-            tarifa = {
-                "servico_id" : i['servico_id'],
-                "instituicao_id" : i['instituicao_id'],
-                "valor_maximo" : i['valor_maximo'],
-                "data_vigencia" : i['data_vigencia'],
-                "unidade" : i['unidade'],
-                "periodicidade" : i['periodicidade'],
-                "moeda" : i['moeda']
-            }
-            
-            
-            if tarifa in tarifas_inseridas: continue
-            
-            # servico_id = tarifa['servico_id']
-            # instituicao_id = tarifa['instituicao_id']
-            # valor_maximo = tarifa['valor_maximo']
-            # data_vigencia = tarifa['data_vigencia']
-            # unidade = tarifa['unidade']
-            # periodicidade = tarifa['periodicidade']
-            # moeda = tarifa['moeda']
-            
-            conn = db.get_database_psql()
-            cur = conn.cursor()
-            cur.execute("INSERT INTO ts_tarifa (ts_servico_id, ts_instituicao_id, ts_valor_maximo, ts_data_vigencia, ts_unidade, ts_periodicidade, ts_moeda) VALUES(%s, %s, %s, %s, %s, %s, %s)", (
-                tarifa['servico_id'],
-                tarifa['instituicao_id'], 
-                tarifa['valor_maximo'], 
-                tarifa['data_vigencia'], 
-                tarifa['unidade'], 
-                tarifa['periodicidade'], 
-                tarifa['moeda']))
-            conn.commit()
-            tarifas_inseridas.append(tarifa)
-            cur.close()
-            conn.close()
+        instituicoes = get_data.get_all_instituicoes()
+        for i in instituicoes:
+            instituicao_id = i[0]
+            cnpj = i[4]
+            tarifas_f = get_data.tarifas_pf(cnpj) 
+            tarifas_j = get_data.tarifas_pj(cnpj)
+            print('passei')
+            if not tarifas_j: tarifas_j = []
+            if not tarifas_f: tarifas_f = []
+            tarifas = [*tarifas_f, *tarifas_j]
+            if not tarifas: 
+                print(f"There is no services for instituition CNPJ: {cnpj}")
+                continue
+            tarifas_inseridas = []
+            for t in tarifas:
+                codigo = t['CodigoServico']
+                s = get_data.get_servico_id_by_codigo(codigo)
+                service_id = s[0]
+                
+                tarifa = {
+                    "servico_id" : service_id,
+                    "instituicao_id" : instituicao_id,
+                    "valor_maximo" : t['ValorMaximo'],
+                    "data_vigencia" : t['DataVigencia'],
+                    "unidade" : t['Unidade'],
+                    "periodicidade": t['Periodicidade'],
+                    "moeda": t['TipoValor']
+                }
+                
+                conn = db.get_database_psql()
+                cur = conn.cursor()
+                cur.execute("INSERT INTO ts_tarifa (ts_servico_id, ts_instituicao_id, ts_valor_maximo, ts_data_vigencia, ts_unidade, ts_periodicidade, ts_moeda) VALUES(%s, %s, %s, %s, %s, %s, %s)", (
+                    tarifa['servico_id'],
+                    tarifa['instituicao_id'], 
+                    tarifa['valor_maximo'], 
+                    tarifa['data_vigencia'], 
+                    tarifa['unidade'], 
+                    tarifa['periodicidade'], 
+                    tarifa['moeda']))
+                conn.commit()
+                tarifas_inseridas.append(tarifa)
+                print(f'Tarifa inserida:',tarifa['instituicao_id'],tarifa['servico_id'],tarifa['data_vigencia'])
+                cur.close()
+                conn.close()
+                
     except Exception as e:
         print(e)
