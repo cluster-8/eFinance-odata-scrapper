@@ -4,10 +4,10 @@ import datetime
 import db
 
 # * OLINDA SOURCE
-def instituicoes():
+def get_financial_instituitions():
     
     url = "https://olinda.bcb.gov.br/olinda/servico/DASFN/versao/v1/odata/Recursos?$top=10000&$format=json&$select=Api,Versao,CnpjInstituicao,NomeInstituicao,NomeContato,EmailContato,Recurso,Argumento,Situacao,URLDados,URLConsulta"
-    
+        
     try:
         result = requests.get(url)
         return result.json()['value']
@@ -15,43 +15,37 @@ def instituicoes():
         print("Erro na busca por Instituições Financeiras:", e)
  
 # ? tarifas
-def tarifas_pf(if_cnpj):
+# def get_physical_person_tariffs(if_cnpj):
     
-    pessoa = 'F'
-    # cnpj = if_cnpj[:9]
-    # cnpj = str(if_cnpj)[:8]
-    cnpj = str(if_cnpj)
+#     pessoa = 'F'
+#     cnpj = str(if_cnpj)[:8]
     
-    url = f"https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaTarifasPorInstituicaoFinanceira(PessoaFisicaOuJuridica=@PessoaFisicaOuJuridica,CNPJ=@CNPJ)?@PessoaFisicaOuJuridica='{pessoa}'&@CNPJ='{cnpj}'&$top=10000&$format=json&$select=CodigoServico,Servico,Unidade,DataVigencia,ValorMaximo,TipoValor,Periodicidade"
+#     url = f"https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaTarifasPorInstituicaoFinanceira(PessoaFisicaOuJuridica=@PessoaFisicaOuJuridica,CNPJ=@CNPJ)?@PessoaFisicaOuJuridica='{pessoa}'&@CNPJ='{cnpj}'&$top=10000&$format=json&$select=CodigoServico,Servico,Unidade,DataVigencia,ValorMaximo,TipoValor,Periodicidade"
     
-    try:
-
-        result = requests.get(url)
-        if len(result.json()['value']) > 0: 
-            # print(result.json())
-            return result.json()['value']
+#     try:
+#         result = requests.get(url)
+#         if len(result.json()['value']) > 0: 
+#             return result.json()['value']
+#     except Exception as e:
+#         print("Erro ao buscar tarifas pessoa física por id:", e)
         
-    except Exception as e:
-        print("Erro ao buscar tarifas pessoa física por id:", e)
-        
-def tarifas_pj(if_cnpj):
+def get_juridical_person_tariffs(if_cnpj):
     
     pessoa = 'J'
-    cnpj = str(if_cnpj)
+    cnpj = str(if_cnpj)[:8]
+
     
     url = f"https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaTarifasPorInstituicaoFinanceira(PessoaFisicaOuJuridica=@PessoaFisicaOuJuridica,CNPJ=@CNPJ)?@PessoaFisicaOuJuridica='{pessoa}'&@CNPJ='{cnpj}'&$top=10000&$format=json&$select=CodigoServico,Servico,Unidade,DataVigencia,ValorMaximo,TipoValor,Periodicidade"
     
     try:
-
         result = requests.get(url)
         if len(result.json()['value']) > 0:
             return result.json()['value']
-        
     except Exception as e:
         print("Erro ao buscar tarifas pessoa jurídica por id:", e)
 
 # ? grupo
-def grupos():
+def get_financial_groups():
     try:
         url = "https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/GruposConsolidados?%24format=json"
         response = requests.get(url)
@@ -59,85 +53,32 @@ def grupos():
     except Exception as e:
         print(f'Get Grupos Consolidados error: {e}')
 
-# ? serviços
-def servicos_pf(if_cnpj):
-    try:
-        last = len(str(if_cnpj))
-        response_status = None
-        value = []
-        if not value: 
-            print(f'{datetime.datetime.now()} - "value" inválido.')
-            # return
-        while len(value) == 0 and last > 0:
-            pessoa = "F"
-            cnpj = str(if_cnpj)[:last]
-            # print(cnpj)
-            url = f"https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaTarifasPorInstituicaoFinanceira(PessoaFisicaOuJuridica=@PessoaFisicaOuJuridica,CNPJ=@CNPJ)?@PessoaFisicaOuJuridica='{pessoa}'&@CNPJ='{cnpj}'&$top=10000&$format=json&$select=CodigoServico,Servico,Unidade,DataVigencia,ValorMaximo,TipoValor,Periodicidade"
-            response = requests.get(url)
-            response_status = response.status_code
-            if response_status == 200:
-                value = response.json()['value']
-                # print(len(value))
-            # print(cnpj)
-            last -= 1
-        return response.json()['value']
-    except Exception as e:
-        print(f"Get IF Services error: {e}")
-        
-def servicos_pj(if_cnpj):
-    try:
-        last = len(str(if_cnpj))
-        response_status = None
-        value = []
-        if not value: 
-            print(f'{datetime.datetime.now()} - "value" inválido.')
-            # return
-        while len(value) == 0 and last > 0:
-            pessoa = "J"
-            cnpj = str(if_cnpj)[:last]
-            # print(cnpj)
-            url = f"https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaTarifasPorInstituicaoFinanceira(PessoaFisicaOuJuridica=@PessoaFisicaOuJuridica,CNPJ=@CNPJ)?@PessoaFisicaOuJuridica='{pessoa}'&@CNPJ='{cnpj}'&$top=10000&$format=json&$select=CodigoServico,Servico,Unidade,DataVigencia,ValorMaximo,TipoValor,Periodicidade"
-            response = requests.get(url)
-            response_status = response.status_code
-            if response_status == 200:
-                value = response.json()['value']
-                # print(len(value))
-            # print(cnpj)
-            last -= 1
-        return response.json()['value']
-    except Exception as e:
-        print(f"Get IF Services error: {e}")
-
 # ? instituições
-def get_instituicoes_by_grupo(grupo_codigo):
+def get_financial_instituitions_by_group(grupo_codigo):
     try:
         url = f"https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaInstituicoesDeGrupoConsolidado(CodigoGrupoConsolidado=@CodigoGrupoConsolidado)?%40CodigoGrupoConsolidado={grupo_codigo}&%24format=json"
         response = requests.get(url)
-        print(response)
         return response.json()['value']
     except Exception as e:
         print(f"Get IF Services error: {e}")
  
 # * DATABASE SOURCE       
-def get_instituicao_id_by_cnpj(cnpj):
+def get_financial_instituition_id_by_cnpj(cnpj):
     try:
-        
         conn = db.get_database_psql()
         cur = conn.cursor()
-        cur.execute("SELECT * FROM if_instituicao WHERE if_cnpj = %s", [cnpj,])
+        cur.execute("SELECT * FROM instituicoes WHERE cnpj = %s", [cnpj,])
         res = cur.fetchall()
         cur.close()
-        print(res[0][0])
-        return res[0][0]
-        
+        return res[0][0] 
     except Exception as e:
         print(f"Get Instituição error: {e}")
         
-def get_servico_id_by_codigo(codigo):
+def get_service_id_by_code(codigo):
     try:
         conn = db.get_database_psql()
         cur = conn.cursor()
-        cur.execute("SELECT * FROM sp_servico WHERE sp_codigo = %s", [codigo,])
+        cur.execute("SELECT * FROM servicos WHERE codigo = %s", [codigo,])
         res = cur.fetchall()
         cur.close()
         # print(res[0])
@@ -145,19 +86,41 @@ def get_servico_id_by_codigo(codigo):
     except Exception as e:
         print(f"Get Serviço error: {e}")
              
-def get_all_instituicoes():
+def get_all_financial_instituitions():
     try:
         conn = db.get_database_psql()
         cur = conn.cursor()
-        cur.execute("SELECT * FROM if_instituicao")
+        cur.execute("SELECT * FROM instituicoes")
         res = cur.fetchall()
         cur.close()
-        # print(res)
         return res
     except Exception as e:
         print(f"Get Serviço error: {e}")
         
-def get_instituicao_by_cnpj(cnpj):
+def get_all_tariffs():
+    try:
+        conn = db.get_database_psql()
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM tarifas")
+        res = cur.fetchall()
+        cur.close()
+        return res
+    except Exception as e:
+        print(f"Get Tarifas error: {e}")
+
+def get_tariff_by_code_and_date(cod, date):
+    try:
+        conn = db.get_database_psql()
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM tarifas WHERE codigo = %s AND data_vigencia", [cod, date])
+        res = cur.fetchall()
+        cur.close()
+        print(res[0][0])
+        return res[0][0]
+    except Exception as e:
+        print(f"Get Tarifa error: {e}")
+        
+def get_financial_instituition_by_cnpj(cnpj):
     try:
         conn = db.get_database_psql()
         cur = conn.cursor()
@@ -167,3 +130,52 @@ def get_instituicao_by_cnpj(cnpj):
         return res
     except Exception as e:
         print(f"Get Instituição error: {e}")
+
+def get_financial_instituitions_tariffs(instituition_name):
+    try:    
+        conn = db.get_database_psql()
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM instituicoes i INNER JOIN tarifas t ON t.instituicao_id =i.id INNER JOIN servicos s ON s.id =t.servico_id WHERE i.nome = %s", [instituition_name,])
+        res = cur.fetchall()
+        cur.close()
+        return res
+    except Exception as e:
+        print(e)
+
+def get_all_apis():
+    try:
+        conn = db.get_database_psql()
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM apis")
+        res = cur.fetchall()
+        cur.close()
+        return res
+    except Exception as e:
+        print(f"Get All APIs error: {e}")
+
+# ! ULTIMA: 90729369000122
+
+def services_pf(cnpj):
+    try:
+        if not cnpj: return
+        url = f"https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaTarifasPorInstituicaoFinanceira(PessoaFisicaOuJuridica=@PessoaFisicaOuJuridica,CNPJ=@CNPJ)?@PessoaFisicaOuJuridica='F'&@CNPJ='{cnpj}'&$top=10000&$format=json&$select=CodigoServico,Servico,Unidade,DataVigencia,ValorMaximo,TipoValor,Periodicidade"
+        
+        response = requests.get(url)
+        
+        return response.json()['value']
+    except Exception as e:
+        print(f"Get Services PF error: {e}")
+        
+def services_pj(cnpj):
+    try:
+        if not cnpj: return 
+        url = f"https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaTarifasPorInstituicaoFinanceira(PessoaFisicaOuJuridica=@PessoaFisicaOuJuridica,CNPJ=@CNPJ)?@PessoaFisicaOuJuridica='J'&@CNPJ='{cnpj}'&$top=10000&$format=json&$select=CodigoServico,Servico,Unidade,DataVigencia,ValorMaximo,TipoValor,Periodicidade"
+        
+        response = requests.get(url)
+        
+        return response.json()['value']
+    except Exception as e:
+        print(f"Get Services PF error: {e}")
+        
+
+
