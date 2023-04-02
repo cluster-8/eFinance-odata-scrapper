@@ -3,90 +3,46 @@ import requests
 import datetime
 import db
 
-# * OLINDA SOURCE
-def get_financial_instituitions():
-    
-    url = "https://olinda.bcb.gov.br/olinda/servico/DASFN/versao/v1/odata/Recursos?$top=10000&$format=json&$select=Api,Versao,CnpjInstituicao,NomeInstituicao,NomeContato,EmailContato,Recurso,Argumento,Situacao,URLDados,URLConsulta"
-        
-    try:
-        result = requests.get(url)
-        return result.json()['value']
-    except Exception as e:
-        print("Erro na busca por Instituições Financeiras:", e)
- 
-# ? tarifas
-# def get_physical_person_tariffs(if_cnpj):
-    
-#     pessoa = 'F'
-#     cnpj = str(if_cnpj)[:8]
-    
-#     url = f"https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaTarifasPorInstituicaoFinanceira(PessoaFisicaOuJuridica=@PessoaFisicaOuJuridica,CNPJ=@CNPJ)?@PessoaFisicaOuJuridica='{pessoa}'&@CNPJ='{cnpj}'&$top=10000&$format=json&$select=CodigoServico,Servico,Unidade,DataVigencia,ValorMaximo,TipoValor,Periodicidade"
-    
-#     try:
-#         result = requests.get(url)
-#         if len(result.json()['value']) > 0: 
-#             return result.json()['value']
-#     except Exception as e:
-#         print("Erro ao buscar tarifas pessoa física por id:", e)
-        
-def get_juridical_person_tariffs(if_cnpj):
-    
-    pessoa = 'J'
-    cnpj = str(if_cnpj)[:8]
-
-    
-    url = f"https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaTarifasPorInstituicaoFinanceira(PessoaFisicaOuJuridica=@PessoaFisicaOuJuridica,CNPJ=@CNPJ)?@PessoaFisicaOuJuridica='{pessoa}'&@CNPJ='{cnpj}'&$top=10000&$format=json&$select=CodigoServico,Servico,Unidade,DataVigencia,ValorMaximo,TipoValor,Periodicidade"
-    
-    try:
-        result = requests.get(url)
-        if len(result.json()['value']) > 0:
-            return result.json()['value']
-    except Exception as e:
-        print("Erro ao buscar tarifas pessoa jurídica por id:", e)
-
-# ? grupo
-def get_financial_groups():
-    try:
-        url = "https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/GruposConsolidados?%24format=json"
-        response = requests.get(url)
-        return response.json()['value']
-    except Exception as e:
-        print(f'Get Grupos Consolidados error: {e}')
-
-# ? instituições
-def get_financial_instituitions_by_group(grupo_codigo):
-    try:
-        url = f"https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaInstituicoesDeGrupoConsolidado(CodigoGrupoConsolidado=@CodigoGrupoConsolidado)?%40CodigoGrupoConsolidado={grupo_codigo}&%24format=json"
-        response = requests.get(url)
-        return response.json()['value']
-    except Exception as e:
-        print(f"Get IF Services error: {e}")
- 
 # * DATABASE SOURCE       
-def get_financial_instituition_id_by_cnpj(cnpj):
+# OK
+def get_financial_instituition_id_by_cnpj(instituition_cnpj):
+    '''
+    Returns Financial Instituition ID
+    
+    :param instituition_cnpj: str
+    '''
     try:
         conn = db.get_database_psql()
         cur = conn.cursor()
-        cur.execute("SELECT * FROM instituicoes WHERE cnpj = %s", [cnpj,])
+        cur.execute("SELECT * FROM instituicoes WHERE cnpj = %s", [instituition_cnpj,])
         res = cur.fetchall()
         cur.close()
         return res[0][0] 
     except Exception as e:
-        print(f"Get Instituição error: {e}")
-        
-def get_service_id_by_code(codigo):
+        print(f"Get Financial Instituition Id by CNPJ error: {e}")
+
+# OK        
+def get_service_id_by_code(service_code):
+    '''
+    Returns Service ID from database
+    
+    :param service_code: str
+    '''
     try:
         conn = db.get_database_psql()
         cur = conn.cursor()
-        cur.execute("SELECT * FROM servicos WHERE codigo = %s", [codigo,])
+        cur.execute("SELECT * FROM servicos WHERE codigo = %s", [service_code,])
         res = cur.fetchall()
         cur.close()
-        # print(res[0])
         return res[0]
     except Exception as e:
-        print(f"Get Serviço error: {e}")
-             
+        print(f"Get Service ID by Code error: {e}")
+
+# OK             
 def get_all_financial_instituitions():
+    '''
+    Returns the list of financial instituitions from database source.
+    '''
     try:
         conn = db.get_database_psql()
         cur = conn.cursor()
@@ -95,9 +51,13 @@ def get_all_financial_instituitions():
         cur.close()
         return res
     except Exception as e:
-        print(f"Get Serviço error: {e}")
-        
+        print(f"Get All Database Financial Instituitions error: {e}")
+
+# OK      
 def get_all_tariffs():
+    '''
+    Returns the list of all tariffs from database source.
+    '''
     try:
         conn = db.get_database_psql()
         cur = conn.cursor()
@@ -106,19 +66,34 @@ def get_all_tariffs():
         cur.close()
         return res
     except Exception as e:
-        print(f"Get Tarifas error: {e}")
+        print(f"Get All Tariffs from database source error: {e}")
 
-def get_tariff_by_code_and_date(cod, date):
+# OK
+def get_all_services():
+    '''
+    Returns the list of all services from database source.
+    '''
     try:
         conn = db.get_database_psql()
         cur = conn.cursor()
-        cur.execute("SELECT * FROM tarifas WHERE codigo = %s AND data_vigencia", [cod, date])
+        cur.execute("SELECT * FROM servicos")
+        res = cur.fetchall()
+        cur.close()
+        return res
+    except Exception as e:
+        print(f"Get All Services from database source error: {e}")
+
+def get_tariff_by_code_and_date(code, date):
+    try:
+        conn = db.get_database_psql()
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM tarifas WHERE codigo = %s AND data_vigencia", [code, date])
         res = cur.fetchall()
         cur.close()
         print(res[0][0])
         return res[0][0]
     except Exception as e:
-        print(f"Get Tarifa error: {e}")
+        print(f"Get Tariff by Code and Date from database source error: {e}")
         
 def get_financial_instituition_by_cnpj(cnpj):
     try:

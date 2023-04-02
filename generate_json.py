@@ -3,7 +3,7 @@ import json
 import datetime
 import requests
 
-import get_data
+import database
 
 # * GENERATE JSON FILES
 def servicos_pf():
@@ -12,7 +12,7 @@ def servicos_pf():
     '''
     print(f'{datetime.datetime.now()} - criando servicos.json.')
     try:
-        ifs = get_data.instituicoes()        
+        ifs = database.instituicoes()        
         all_services = []
         
         json_data = open('bkp-services.json')
@@ -27,7 +27,7 @@ def servicos_pf():
             print(f'{datetime.datetime.now()} - buscando serviços de {if_name} ------------------------')
             # cnpj = i['CnpjInstituicao']
             cnpj = ifs[idx]['CnpjInstituicao']
-            services = get_data.servicos_pf(cnpj)
+            services = database.servicos_pf(cnpj)
             
             if len(services) > 0: 
                 for i in services:
@@ -61,7 +61,7 @@ def servicos_pj():
     '''
     print(f'{datetime.datetime.now()} - criando servicos.json.')
     try:
-        ifs = get_data.instituicoes()        
+        ifs = database.instituicoes()        
         all_services = []
         
         # json_data = open('./json/services-pj-2.json')
@@ -72,7 +72,7 @@ def servicos_pj():
             if_name = ifs[idx]['NomeInstituicao']
             print(f'{datetime.datetime.now()} - buscando serviços de {if_name} ------------------------')
             cnpj = ifs[idx]['CnpjInstituicao']
-            services = get_data.servicos_pj(cnpj)
+            services = database.servicos_pj(cnpj)
             
             if len(services) > 0: 
                 for i in services:
@@ -106,7 +106,7 @@ def instituicoes():
     '''
     print(f'{datetime.datetime.now()}- gerando instituições.json')
     try:
-        data = get_data.instituicoes()
+        data = database.instituicoes()
         aux = []
         for i in data:
             cnpj_formatado = get_cnpj_formatado(i['CnpjInstituicao'])
@@ -136,7 +136,7 @@ def grupos():
     '''
     print(f'{datetime.datetime.now()}- gerando grupos.json')
     try:
-        data = get_data.grupos()
+        data = database.grupos()
         aux = []
         for val in data:
             obj = {
@@ -158,12 +158,12 @@ def tarifas_pf():
     '''
     print(f'{datetime.datetime.now()} - criando tarifas-pf.json.')
     try:
-        ifs = get_data.get_all_instituicoes()
+        ifs = database.get_all_instituicoes()
         aux = []
         for idx in ifs:
             instituicao_id = idx[0]
             cnpj_formatado = idx[4]
-            tarifas = get_data.tarifas_pf(cnpj_formatado)
+            tarifas = database.tarifas_pf(cnpj_formatado)
             
             if not tarifas: 
                 print(f'{datetime.datetime.now()} - nenhuma tarifa encontrada para instituicão de CNPJ: {cnpj_formatado}')
@@ -171,7 +171,7 @@ def tarifas_pf():
             else:
                 for t in tarifas:
                     cod_servico = t['CodigoServico']
-                    servico = get_data.get_servico_id_by_codigo(cod_servico)
+                    servico = database.get_servico_id_by_codigo(cod_servico)
                     servico_id = servico[0]
                     
                     obj = {
@@ -212,12 +212,12 @@ def tarifas_pj():
     '''
     print(f'{datetime.datetime.now()} - criando tarifas-pj.json.')
     try:
-        ifs = get_data.get_all_instituicoes()
+        ifs = database.get_all_instituicoes()
         aux = []
         for idx in ifs:
             instituicao_id = idx[0]
             cnpj_formatado = idx[4]
-            tarifas = get_data.tarifas_pj(cnpj_formatado)
+            tarifas = database.tarifas_pj(cnpj_formatado)
             
             if not tarifas: 
                 print(f'{datetime.datetime.now()} - nenhuma tarifa encontrada para instituicão de CNPJ: {cnpj_formatado}')
@@ -225,7 +225,7 @@ def tarifas_pj():
             else:
                 for t in tarifas:
                     cod_servico = t['CodigoServico']
-                    servico = get_data.get_servico_id_by_codigo(cod_servico)
+                    servico = database.get_servico_id_by_codigo(cod_servico)
                     servico_id = servico[0]
                     
                     obj = {

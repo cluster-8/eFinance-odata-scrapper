@@ -105,41 +105,6 @@ def get_financial_instituitions_endpoints():
     except Exception as e:
         print(f"Get Financial Instituitions endpoints error: {e}")
 
-# * TAXAS DE JUROS PARA OPERAÇÕES DE CRÉDITO
-def get_daily_interest_rates_per_beginning_period(start_date: str):
-    '''
-       Function to get the credit operations rates of all financial irnstituitions by beginning period
-    '''
-    try:
-        if not start_date:
-            print('Start date not specified!')
-            return
-            
-        url = f"https://olinda.bcb.gov.br/olinda/servico/taxaJuros/versao/v2/odata/TaxasJurosDiariaPorInicioPeriodo?$top=100&$filter=InicioPeriodo%20eq%20'{start_date}'&$format=json&$select=InicioPeriodo,FimPeriodo,Segmento,Modalidade,Posicao,InstituicaoFinanceira,TaxaJurosAoMes,TaxaJurosAoAno,cnpj8"
-        
-        response = requests.get(url)
-        
-        return response.json()['value']
-    except Exception as e:
-        print(f"Get Rates on Credits Operations error: {e}")
-        
-def get_daily_interest_rates_per_instituition(cnpj8: str):
-    '''
-    '''
-    try:
-        if not cnpj8:
-            print('Start date not specified!')
-            return
-            
-        url = f"https://olinda.bcb.gov.br/olinda/servico/taxaJuros/versao/v2/odata/TaxasJurosDiariaPorInicioPeriodo?$filter=cnpj8%20eq%20'{cnpj8}'&$format=json&$select=InicioPeriodo,FimPeriodo,Segmento,Modalidade,Posicao,InstituicaoFinanceira,TaxaJurosAoMes,TaxaJurosAoAno,cnpj8"
-        
-        response = requests.get(url)
-        
-        return response.json()['value']
-    except Exception as e:
-        print(f"Get Rates on Credits Operations error: {e}")
-        
-def get_query_dates():
     '''
     '''
     try:
