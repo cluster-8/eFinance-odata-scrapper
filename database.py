@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
-import requests
-import datetime
 import db
 
-# * DATABASE SOURCE       
-# OK
-def get_financial_instituition_id_by_cnpj(instituition_cnpj):
+# * DATABASE SOURCE
+def get_financial_instituition_id_by_cnpj(instituition_cnpj: str):
     '''
     Returns Financial Instituition ID
     
@@ -21,8 +18,7 @@ def get_financial_instituition_id_by_cnpj(instituition_cnpj):
     except Exception as e:
         print(f"Get Financial Instituition Id by CNPJ error: {e}")
 
-# OK        
-def get_service_id_by_code(service_code):
+def get_service_id_by_code(service_code: str):
     '''
     Returns Service ID from database
     
@@ -37,8 +33,7 @@ def get_service_id_by_code(service_code):
         return res[0]
     except Exception as e:
         print(f"Get Service ID by Code error: {e}")
-
-# OK             
+             
 def get_all_financial_instituitions():
     '''
     Returns the list of financial instituitions from database source.
@@ -47,13 +42,13 @@ def get_all_financial_instituitions():
         conn = db.get_database_psql()
         cur = conn.cursor()
         cur.execute("SELECT * FROM instituicoes")
+        # cur.execute("SELECT * FROM instituicoes i INNER JOIN instituicao_grupo ig  ON ig.instituicao_id =i.id INNER JOIN grupos g ON g.id =ig.grupo_id ")
         res = cur.fetchall()
         cur.close()
         return res
     except Exception as e:
         print(f"Get All Database Financial Instituitions error: {e}")
 
-# OK      
 def get_all_tariffs():
     '''
     Returns the list of all tariffs from database source.
@@ -68,7 +63,6 @@ def get_all_tariffs():
     except Exception as e:
         print(f"Get All Tariffs from database source error: {e}")
 
-# OK
 def get_all_services():
     '''
     Returns the list of all services from database source.
@@ -83,19 +77,12 @@ def get_all_services():
     except Exception as e:
         print(f"Get All Services from database source error: {e}")
 
-def get_tariff_by_code_and_date(code, date):
-    try:
-        conn = db.get_database_psql()
-        cur = conn.cursor()
-        cur.execute("SELECT * FROM tarifas WHERE codigo = %s AND data_vigencia", [code, date])
-        res = cur.fetchall()
-        cur.close()
-        print(res[0][0])
-        return res[0][0]
-    except Exception as e:
-        print(f"Get Tariff by Code and Date from database source error: {e}")
-        
-def get_financial_instituition_by_cnpj(cnpj):
+def get_financial_instituition_by_cnpj(cnpj: str):
+    '''
+    Returns financial instituition by cnpj.
+    
+    :param cnpj: str
+    '''
     try:
         conn = db.get_database_psql()
         cur = conn.cursor()
@@ -104,53 +91,107 @@ def get_financial_instituition_by_cnpj(cnpj):
         cur.close()
         return res
     except Exception as e:
-        print(f"Get Instituição error: {e}")
+        print(f"Get Financial Instituition by CNPJ {e}")
 
-def get_financial_instituitions_tariffs(instituition_name):
+def get_financial_instituition_by_cnpj8(cnpj8: str):
+    '''
+    Returns financial instituition by cnpj8.
+    
+    :param cnpj8: str
+    '''
+    try:
+        conn = db.get_database_psql()
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM instituicoes WHERE cnpj_formatado = %s", [cnpj8,])
+        res = cur.fetchall()
+        cur.close()
+        return res
+    except Exception as e:
+        print(f"Get Financial Instituition by CNPJ8 {e}")
+
+def get_financial_instituitions_physical_person_tariffs(cnpj: str):
+    '''
+    Returns a list of all physical person services tariffs by Financial Instituition CNPJ
+    
+    :param cnpj: str 
+    '''
     try:    
         conn = db.get_database_psql()
         cur = conn.cursor()
-        cur.execute("SELECT * FROM instituicoes i INNER JOIN tarifas t ON t.instituicao_id =i.id INNER JOIN servicos s ON s.id =t.servico_id WHERE i.nome = %s", [instituition_name,])
+        cur.execute("SELECT * FROM instituicoes i INNER JOIN tarifas t ON t.instituicao_id =i.id INNER JOIN servicos s ON s.id =t.servico_id WHERE i.cnpj = %s AND s.tipo = 'F'", [cnpj,])
         res = cur.fetchall()
         cur.close()
         return res
     except Exception as e:
-        print(e)
+        print(f"Get Financial Instituition Tariffs error: {e}")
 
-def get_all_apis():
+def get_financial_instituitions_legal_person_tariffs(cnpj: str):
+    '''
+    Returns a list of all legal person services tariffs by Financial Instituition CNPJ
+    
+    :param cnpj: str 
+    '''
+    try:    
+        conn = db.get_database_psql()
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM instituicoes i INNER JOIN tarifas t ON t.instituicao_id =i.id INNER JOIN servicos s ON s.id =t.servico_id WHERE i.cnpj = %s AND s.tipo = 'J'", [cnpj,])
+        res = cur.fetchall()
+        cur.close()
+        return res
+    except Exception as e:
+        print(f"Get Financial Instituition Tariffs error: {e}")
+
+def get_financial_instituitions_tariffs(cnpj: str):
+    '''
+    Returns a list of all tariffs by Financial Instituition CNPJ
+    
+    :param cnpj: str 
+    '''
+    try:    
+        conn = db.get_database_psql()
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM instituicoes i INNER JOIN tarifas t ON t.instituicao_id =i.id INNER JOIN servicos s ON s.id =t.servico_id WHERE i.cnpj = %s", [cnpj,])
+        res = cur.fetchall()
+        cur.close()
+        return res
+    except Exception as e:
+        print(f"Get Financial Instituition Tariffs error: {e}")
+
+def get_all_consolidated_groups():
+    '''
+    Returns the list of all consolidated groups from database source.
+    '''
     try:
         conn = db.get_database_psql()
         cur = conn.cursor()
-        cur.execute("SELECT * FROM apis")
+        cur.execute("SELECT * FROM grupos")
         res = cur.fetchall()
         cur.close()
         return res
     except Exception as e:
-        print(f"Get All APIs error: {e}")
+        print(f"Get All Consolidated Groups from database source error: {e}")
 
-# ! ULTIMA: 90729369000122
-
-def services_pf(cnpj):
+def get_financial_instituition_groups(id: str):
+    '''
+    Returns all Consolidated groups of a given Financial Instituition by id.
+    
+    :param cnpj: str
+    '''
     try:
-        if not cnpj: return
-        url = f"https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaTarifasPorInstituicaoFinanceira(PessoaFisicaOuJuridica=@PessoaFisicaOuJuridica,CNPJ=@CNPJ)?@PessoaFisicaOuJuridica='F'&@CNPJ='{cnpj}'&$top=10000&$format=json&$select=CodigoServico,Servico,Unidade,DataVigencia,ValorMaximo,TipoValor,Periodicidade"
-        
-        response = requests.get(url)
-        
-        return response.json()['value']
+        conn = db.get_database_psql()
+        cur = conn.cursor()
+        cur.execute("SELECT g.codigo, g.nome FROM instituicoes i \
+                    INNER JOIN instituicao_grupo ig  ON ig.instituicao_id = i.id \
+                    INNER JOIN grupos g ON g.id = ig.grupo_id \
+                    WHERE ig.instituicao_id = %s", [id,])
+        res = cur.fetchall()
+        cur.close()
+        return res
     except Exception as e:
-        print(f"Get Services PF error: {e}")
-        
-def services_pj(cnpj):
-    try:
-        if not cnpj: return 
-        url = f"https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaTarifasPorInstituicaoFinanceira(PessoaFisicaOuJuridica=@PessoaFisicaOuJuridica,CNPJ=@CNPJ)?@PessoaFisicaOuJuridica='J'&@CNPJ='{cnpj}'&$top=10000&$format=json&$select=CodigoServico,Servico,Unidade,DataVigencia,ValorMaximo,TipoValor,Periodicidade"
-        
-        response = requests.get(url)
-        
-        return response.json()['value']
-    except Exception as e:
-        print(f"Get Services PF error: {e}")
-        
+        print(f"Get Financial Instituition Groups from database source error: {e}")
 
+def get_financial_instituitions_physical_person_services(cnpj: str):
+    pass
 
+def get_financial_instituitions_legal_person_services(cnpj: str):
+    pass
