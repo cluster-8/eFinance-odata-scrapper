@@ -1,3 +1,8 @@
-requests
-pymongo
-python-dotenv
+certifi==2022.12.7
+charset-normalizer==3.1.0
+dnspython==2.3.0
+idna==3.4
+psycopg2-binary==2.9.6
+python-dotenv==1.0.0
+requests==2.28.2
+urllib3==1.26.14
