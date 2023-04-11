@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 import populate
 import database
+# import score
+# import schedule
+# import time
 
 def run_update_database():
     print("Starting database update ...")
@@ -25,17 +28,10 @@ if __name__ == "__main__":
     
     run_update_database()
 
+    # schedule.every(interval=).day.at("03:00").do(run_update_database)
+    # schedule.every(2).minutes.do(run_update_database)
 
-from apscheduler.schedulers.blocking import BlockingScheduler
-
-sched = BlockingScheduler()
-
-@sched.scheduled_job('interval', minutes=3)
-def timed_job():
-    print('This job is run every three minutes.')
-
-@sched.scheduled_job('cron', day_of_week='mon-fri', hour=17)
-def scheduled_job():
-    print('This job is run every weekday at 5pm.')
-
-sched.start()
+    # while True:
+    #     print('true?')
+    #     schedule.run_pending()
+    #     time.sleep(30)
