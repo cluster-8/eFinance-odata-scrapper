@@ -14,7 +14,7 @@ def get_financial_instituition_id_by_cnpj(instituition_cnpj):
     try:
         conn = db.get_database_psql()
         cur = conn.cursor()
-        cur.execute("SELECT * FROM instituicoes WHERE cnpj = %s", [instituition_cnpj,])
+        cur.execute("SELECT * FROM instituicoes WHERE cnpj = %s OR cnpj_formatado = %s", [instituition_cnpj,])
         res = cur.fetchall()
         cur.close()
         return res[0][0] 
@@ -106,17 +106,6 @@ def get_financial_instituition_by_cnpj(cnpj):
     except Exception as e:
         print(f"Get Instituição error: {e}")
 
-def get_financial_instituitions_tariffs(instituition_name):
-    try:    
-        conn = db.get_database_psql()
-        cur = conn.cursor()
-        cur.execute("SELECT * FROM instituicoes i INNER JOIN tarifas t ON t.instituicao_id =i.id INNER JOIN servicos s ON s.id =t.servico_id WHERE i.nome = %s", [instituition_name,])
-        res = cur.fetchall()
-        cur.close()
-        return res
-    except Exception as e:
-        print(e)
-
 def get_all_apis():
     try:
         conn = db.get_database_psql()
@@ -128,9 +117,27 @@ def get_all_apis():
     except Exception as e:
         print(f"Get All APIs error: {e}")
 
-# ! ULTIMA: 90729369000122
+def get_financial_instituitions_tariffs_by_id(id: str):
+    '''
+    Returns a list of all tariffs by Financial Instituition id
+    
+    :param id: str 
+    '''
+    try:    
+        conn = db.get_database_psql()
+        cur = conn.cursor()
+        cur.execute("SELECT DISTINCT ON (t.servico_id) t.servico_id, t.valor_maximo, s.tipo FROM (SELECT * FROM tarifas WHERE instituicao_id = %s ORDER BY data_vigencia desc) t inner join servicos s on s.id = t.servico_id", [id])
+        res = cur.fetchall()
+        cur.close()
+        return res
+    except Exception as e:
+        print(f"Get Financial Instituition Tariffs error: {e}")
 
-def services_pf(cnpj):
+
+def get_all_consolidated_groups():
+    '''
+    Returns the list of all consolidated groups from database source.
+    '''
     try:
         if not cnpj: return
         url = f"https://olinda.bcb.gov.br/olinda/servico/Informes_ListaTarifasPorInstituicaoFinanceira/versao/v1/odata/ListaTarifasPorInstituicaoFinanceira(PessoaFisicaOuJuridica=@PessoaFisicaOuJuridica,CNPJ=@CNPJ)?@PessoaFisicaOuJuridica='F'&@CNPJ='{cnpj}'&$top=10000&$format=json&$select=CodigoServico,Servico,Unidade,DataVigencia,ValorMaximo,TipoValor,Periodicidade"
