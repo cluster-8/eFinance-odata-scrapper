@@ -44,11 +44,6 @@ def populate_score_by_institution(cnpj, instituicao):
         return create_score(instituicao[0], scorePf, scorePj, scoreTtl, len(tarifas))
     else:
         lastScore = lastScore[0]
-        
-    print(lastScore[2])
-    print(scorePf)
-    print(scorePj)
-    print(scoreTtl)
 
     if (lastScore and (lastScore[2] != scorePf or lastScore[3] != scorePj or lastScore[4] != scoreTtl or lastScore[5] != len(tarifas))):
         return create_score(instituicao[0], scorePf, scorePj, scoreTtl, len(tarifas))
