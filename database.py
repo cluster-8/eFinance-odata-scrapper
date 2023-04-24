@@ -11,7 +11,7 @@ def get_financial_instituition_id_by_cnpj(instituition_cnpj: str):
     try:
         conn = db.get_database_psql()
         cur = conn.cursor()
-        cur.execute("SELECT * FROM instituicoes WHERE cnpj = %s", [instituition_cnpj,])
+        cur.execute("SELECT * FROM instituicoes WHERE cnpj = %s OR cnpj_formatado = %s", [instituition_cnpj,])
         res = cur.fetchall()
         cur.close()
         return res[0][0] 
@@ -157,20 +157,6 @@ def get_financial_instituitions_tariffs(cnpj: str):
     except Exception as e:
         print(f"Get Financial Instituition Tariffs error: {e}")
 
-def get_all_consolidated_groups():
-    '''
-    Returns the list of all consolidated groups from database source.
-    '''
-    try:
-        conn = db.get_database_psql()
-        cur = conn.cursor()
-        cur.execute("SELECT * FROM grupos")
-        res = cur.fetchall()
-        cur.close()
-        return res
-    except Exception as e:
-        print(f"Get All Consolidated Groups from database source error: {e}")
-
 def get_financial_instituition_groups(id: str):
     '''
     Returns all Consolidated groups of a given Financial Instituition by id.
@@ -189,6 +175,36 @@ def get_financial_instituition_groups(id: str):
         return res
     except Exception as e:
         print(f"Get Financial Instituition Groups from database source error: {e}")
+
+def get_all_consolidated_groups():
+    '''
+    Returns the list of all consolidated groups from database source.
+    '''
+    try:
+        conn = db.get_database_psql()
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM grupos")
+        res = cur.fetchall()
+        cur.close()
+        return res
+    except Exception as e:
+        print(f"Get All Consolidated Groups from database source error: {e}")
+
+def get_financial_instituitions_tariffs_by_id(id: str):
+    '''
+    Returns a list of all tariffs by Financial Instituition id
+    
+    :param id: str 
+    '''
+    try:    
+        conn = db.get_database_psql()
+        cur = conn.cursor()
+        cur.execute("SELECT DISTINCT ON (t.servico_id) t.servico_id, t.valor_maximo, s.tipo FROM (SELECT * FROM tarifas WHERE instituicao_id = %s ORDER BY data_vigencia desc) t inner join servicos s on s.id = t.servico_id", [id])
+        res = cur.fetchall()
+        cur.close()
+        return res
+    except Exception as e:
+        print(f"Get Financial Instituition Tariffs error: {e}")
 
 def get_financial_instituitions_physical_person_services(cnpj: str):
     pass
