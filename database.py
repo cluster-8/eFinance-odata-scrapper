@@ -199,7 +199,7 @@ def get_financial_instituitions_tariffs_by_id(id: str):
     try:    
         conn = db.get_database_psql()
         cur = conn.cursor()
-        cur.execute("SELECT DISTINCT ON (t.servico_id) t.servico_id, t.valor_maximo, s.tipo FROM (SELECT * FROM tarifas WHERE instituicao_id = %s ORDER BY data_vigencia desc) t inner join servicos s on s.id = t.servico_id", [id])
+        cur.execute("SELECT DISTINCT ON (t.servico_id) t.servico_id, t.valor_maximo, s.tipo, s.nome, t.data_vigencia FROM (SELECT * FROM tarifas WHERE instituicao_id = %s ORDER BY data_vigencia desc) t inner join servicos s on s.id = t.servico_id", [id])
         res = cur.fetchall()
         cur.close()
         return res
@@ -211,3 +211,14 @@ def get_financial_instituitions_physical_person_services(cnpj: str):
 
 def get_financial_instituitions_legal_person_services(cnpj: str):
     pass
+
+def get_all_tariffs_by_cnpj_and_code(instituition_cnpj: str, service_code: str):
+    try:
+        conn = db.get_database_psql()
+        cur = conn.cursor()
+        cur.execute("SELECT t.valor_maximo, t.data_vigencia, t.unidade, t.periodicidade, t.moeda, s.nome, s.codigo, s.tipo FROM tarifas t INNER JOIN servicos s ON s.id = t.servico_id INNER JOIN instituicoes i ON i.id = t.instituicao_id WHERE i.cnpj = %s AND s.codigo = %s ORDER BY t.data_vigencia ASC", [instituition_cnpj, service_code])
+        res = cur.fetchall()
+        cur.close()
+        return res
+    except Exception as e:
+        print(f'Get All Tariffs by CNPJ and Service Code error: {e}')
