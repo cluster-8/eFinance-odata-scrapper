@@ -2,22 +2,14 @@
 
 Open Data Scrapper is a service to get data from [Banco Central do Brasil](https://dadosabertos.bcb.gov.br/) and update **eFinance** database. 
 
-## Pre Running
-
-Create a virtual environment
+## Build Docker image
 
 ```bash
-virtualenv venv
+docker build --tag efinance-scrapper .
 ```
 
-Install dependencies
+## Start Docker container
 
 ```bash
-pip install -r requirements.txt
-```
-
-## Running the app
-
-```bash
-python3 main.py
+docker run -d -p 5000:5000 efinance-scrapper
 ```
