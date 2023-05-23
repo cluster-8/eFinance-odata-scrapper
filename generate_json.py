@@ -12,6 +12,7 @@ def servicos_pf():
     '''
         Gera uma massa de dados em json com todos os servicos para pessoa física na plataforma odata
     '''
+    logging.info('Criando servicos.json.', exc_info=True)
     print(f'{datetime.datetime.now()} - criando servicos.json.')
     try:
         ifs = database.instituicoes()        
@@ -26,6 +27,7 @@ def servicos_pf():
         while idx >=  0:
             # if_name = i['NomeInstituicao']
             if_name = ifs[idx]['NomeInstituicao']
+            logging.info(f'buscando serviços de {if_name}', exc_info=True)
             print(f'{datetime.datetime.now()} - buscando serviços de {if_name} ------------------------')
             # cnpj = i['CnpjInstituicao']
             cnpj = ifs[idx]['CnpjInstituicao']
@@ -51,6 +53,7 @@ def servicos_pf():
                         f.close()
                     else:
                         cod = i['CodigoServico']
+                        logging.info(f'Serviço {cod} já existe.', exc_info=True)
                         print(f'{datetime.datetime.now()} - serviço {cod} já existe.')
                         continue
             idx -= 1
@@ -62,6 +65,7 @@ def servicos_pj():
     '''
         Gera uma massa de dados em json com todos os servicos para pessoa jurídica na plataforma odata
     '''
+    logging.info('Criando servicos.json.', exc_info=True)
     print(f'{datetime.datetime.now()} - criando servicos.json.')
     try:
         ifs = database.instituicoes()        
@@ -108,6 +112,7 @@ def instituicoes():
     '''
         Gera uma massa de dados em json com todas as instituições financeiras na plataforma odata
     '''
+    logging.info('Gerando instituições.json.', exc_info=True)
     print(f'{datetime.datetime.now()}- gerando instituições.json')
     try:
         data = database.instituicoes()
@@ -139,6 +144,7 @@ def grupos():
     '''
         Gera uma massa de dados em json com todos os grupos consolidados na plataforma odata
     '''
+    logging.info('gerando grupos.json', exc_info=True)
     print(f'{datetime.datetime.now()}- gerando grupos.json')
     try:
         data = database.grupos()
@@ -162,6 +168,7 @@ def tarifas_pf():
     '''
         Rertorna as tarifas para serviços pessoa física
     '''
+    logging.info('criando tarifas-pf.json', exc_info=True)
     print(f'{datetime.datetime.now()} - criando tarifas-pf.json.')
     try:
         ifs = database.get_all_instituicoes()
@@ -217,6 +224,7 @@ def tarifas_pj():
     '''
         Rertorna as tarifas para serviços pessoa jurídica
     '''
+    logging.info('criando tarifas-pj.json', exc_info=True)
     print(f'{datetime.datetime.now()} - criando tarifas-pj.json.')
     try:
         ifs = database.get_all_instituicoes()
