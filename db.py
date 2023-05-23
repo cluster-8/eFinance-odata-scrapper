@@ -14,4 +14,5 @@ def get_database_psql():
          password=envs['DB_PASS'])
       return conn
    except Exception as e:
+      logging.error('Get Database PSQL, connection error', exc_info=True)
       print(e)

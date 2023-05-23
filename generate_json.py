@@ -2,6 +2,8 @@
 import json
 import datetime
 import requests
+import logging
+import log
 
 import database
 
@@ -53,6 +55,7 @@ def servicos_pf():
                         continue
             idx -= 1
     except Exception as e:
+        logging.error('Serviços PF', exc_info=True)
         print(f'{datetime.datetime.now()} - Erro: {e}')
         
 def servicos_pj():
@@ -98,6 +101,7 @@ def servicos_pj():
                         continue
             idx -= 1
     except Exception as e:
+        logging.error('Serviços PJ', exc_info=True)
         print(f'{datetime.datetime.now()} - Erro: {e}')
 
 def instituicoes():
@@ -128,6 +132,7 @@ def instituicoes():
         # f.close()
         return
     except Exception as e:
+        logging.error('Instituições', exc_info=True)
         print(f'{datetime.datetime.now()} - Erro: {e}')
 
 def grupos():
@@ -150,6 +155,7 @@ def grupos():
         f.close()
         return 
     except Exception as e:
+        logging.error('Generate Grupos Consolidados JSON error', exc_info=True)
         print(f'Generate Grupos Consolidados JSON error: {e}')
 
 def tarifas_pf():
@@ -204,6 +210,7 @@ def tarifas_pf():
             # }
         
     except Exception as e:
+        logging.error('Tarifas PF error', exc_info=True)
         print(f'{datetime.datetime.now()} - Erro: {e}')
 
 def tarifas_pj():
@@ -245,6 +252,7 @@ def tarifas_pj():
                     f.close()
         
     except Exception as e:
+        logging.error('Tarifas PJ error', exc_info=True)
         print(f'{datetime.datetime.now()} - Erro: {e}')
         
 def get_cnpj_formatado(cnpj):
@@ -269,5 +277,6 @@ def get_cnpj_formatado(cnpj):
             last -= 1
         return cnpj
     except Exception as e:
+        logging.error('Get CNPJ formatado error', exc_info=True)
         print(f'{datetime.datetime.now()} - Erro: {e}')
     
