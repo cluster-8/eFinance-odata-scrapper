@@ -1,6 +1,8 @@
 import db
 import database
 import olinda
+import logging
+import log
 
 # * POPULATE DATABASE
 # refatorando
@@ -25,11 +27,13 @@ def insert_financial_instituitions():
                         conn.commit()
                         cur.close()
                         conn.close()
+                        logging.info(f"Inserting Financial Instituition {nome} {cnpj} on database", exc_info=True)
                         print(f"Inserting Financial Instituition: {nome} {cnpj}")
                     except Exception as e:
                         print(f"Insert Financial Instituition {nome} {cnpj} on database error: {e}")
         else: print("There is no new Financial Instituitions to be inserted on database.")
     except Exception as e:
+        logging.error("Insert Financial Instituitions error", exc_info=True)
         print("Insert Financial Instituitions error:", e)
         
 def insert_physical_person_services():
@@ -57,10 +61,12 @@ def insert_physical_person_services():
                     inserted_services_codes.append(code)
                     cur.close()
                     conn.close()
+                    logging.info(f"Inserting Physical Person Service: {code} {name}", exc_info=True)
                     print(f"Inserting Physical Person Service: {code} {name}")
                 except Exception as e:
                     print(f'Insert Physical Person Service {code} {name} error: {e}')
     except Exception as e:
+        logging.error('Insert Physical Person Services error', exc_info=True)
         print(f"Insert Physical Person Services error: {e}")
         
 def insert_juridical_person_services():
@@ -89,9 +95,11 @@ def insert_juridical_person_services():
                     cur.close()
                     conn.close()
                     print(f"Inserting Juridical Person Service: {code} {name}")
+                    logging.info(f'Inserting Juridical Person Service {code} {name}', exc_info=True)
                 except Exception as e:
                     print(f'Insert Juridical Person Service {code} {name} error: {e}')
     except Exception as e:
+        logging.error('Insert Juridical Person Services error', exc_info=True)
         print(f"Insert Juridical Person Services error: {e}")
         
 def insert_consolidated_groups():
@@ -117,12 +125,14 @@ def insert_consolidated_groups():
                     group['Codigo'],
                     group['Nome']))
                 conn.commit()
+                logging.info(f"Insert Consolidated Group {group['Codigo']} {group['Nome']}", exc_info=True)
                 print(f'Insert Consolidated Group: ', group['Codigo'], group['Nome'])
                 cur.close()
                 conn.close()
             except Exception as e:
                 print(f"Insert Consolidated Group: {e}")
     except Exception as e:
+        logging.error('Insert Consolidated Groups error', exc_info=True)
         print(f"Insert Consolidated Groups error: {e}")
 
 def insert_financial_instituition_groups():
@@ -152,12 +162,14 @@ def insert_financial_instituition_groups():
                     cur = conn.cursor()
                     cur.execute("INSERT INTO instituicao_grupo (instituicao_id, grupo_id) VALUES(%s, %s)", (inst_id, group_id))
                     conn.commit()
+                    logging.info(f"Insert Instituition Group {inst_on_database[0][1]} {inst_on_database[0][2]} {group[1]}", exc_info=True)
                     print(f"Insert Instituition Group {inst_on_database[0][1]} {inst_on_database[0][2]} {group[1]}")
                     cur.close()
                     conn.close()
                 except Exception as e:
                     print(f"Update Financial Instituition Group error: {e}")            
     except Exception as e:
+        logging.error('Update Financial Instituition Groups error', exc_info=True)
         print(f"Update Financial Instituition Groups error: {e}")
 
 def insert_financial_instituition_tariffs(instituition: tuple, groups: list):
@@ -187,6 +199,7 @@ def insert_financial_instituition_tariffs(instituition: tuple, groups: list):
         insert_tariffs(instituition_id, juridical_person_tariffs, groups, "J")
         
     except Exception as e:
+        logging.error('Insert Financial Instituition Tariffs error', exc_info=True)
         print(f"Insert Financial Instituition Tariffs error: {e}")
         
 def insert_tariffs(instituition_id: str, tariffs: list, groups: list, service_type: str):
@@ -242,5 +255,6 @@ def insert_tariffs(instituition_id: str, tariffs: list, groups: list, service_ty
             except Exception as e:
                 print(f"Insert Financial Insitituition Tariff error: {e}")
     except Exception as e:
+        logging.error('Insert All Tariffs error', exc_info=True)
         print(f"Insert All Tariffs error: {e}")
  

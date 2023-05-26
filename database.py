@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 import db
+import logging
+import log
 
 # * DATABASE SOURCE
 def get_financial_instituition_id_by_cnpj(instituition_cnpj: str):
@@ -16,6 +18,7 @@ def get_financial_instituition_id_by_cnpj(instituition_cnpj: str):
         cur.close()
         return res[0][0] 
     except Exception as e:
+        logging.error('Get Financial Instituition Id by CNPJ error', exc_info=True)
         print(f"Get Financial Instituition Id by CNPJ error: {e}")
 
 def get_service_id_by_code(service_code: str):
@@ -32,6 +35,7 @@ def get_service_id_by_code(service_code: str):
         cur.close()
         return res[0]
     except Exception as e:
+        logging.error('Get Service ID by Code error', exc_info=True)
         print(f"Get Service ID by Code error: {e}")
              
 def get_all_financial_instituitions():
@@ -47,6 +51,7 @@ def get_all_financial_instituitions():
         cur.close()
         return res
     except Exception as e:
+        logging.error('Get All Database Financial Instituitions error', exc_info=True)
         print(f"Get All Database Financial Instituitions error: {e}")
 
 def get_all_tariffs():
@@ -61,6 +66,7 @@ def get_all_tariffs():
         cur.close()
         return res
     except Exception as e:
+        logging.error('Get All Tariffs from database source error', exc_info=True)
         print(f"Get All Tariffs from database source error: {e}")
 
 def get_all_services():
@@ -75,6 +81,7 @@ def get_all_services():
         cur.close()
         return res
     except Exception as e:
+        logging.error('Get All Services from database source error', exc_info=True)
         print(f"Get All Services from database source error: {e}")
 
 def get_financial_instituition_by_cnpj(cnpj: str):
@@ -91,6 +98,7 @@ def get_financial_instituition_by_cnpj(cnpj: str):
         cur.close()
         return res
     except Exception as e:
+        logging.error('Get Financial Instituition by CNPJ', exc_info=True)
         print(f"Get Financial Instituition by CNPJ {e}")
 
 def get_financial_instituition_by_cnpj8(cnpj8: str):
@@ -107,6 +115,7 @@ def get_financial_instituition_by_cnpj8(cnpj8: str):
         cur.close()
         return res
     except Exception as e:
+        logging.error('Get Financial Instituition by CNPJ8', exc_info=True)
         print(f"Get Financial Instituition by CNPJ8 {e}")
 
 def get_financial_instituitions_physical_person_tariffs(cnpj: str):
@@ -123,6 +132,7 @@ def get_financial_instituitions_physical_person_tariffs(cnpj: str):
         cur.close()
         return res
     except Exception as e:
+        logging.error('Get Financial Instituition Tariffs error', exc_info=True)
         print(f"Get Financial Instituition Tariffs error: {e}")
 
 def get_financial_instituitions_legal_person_tariffs(cnpj: str):
@@ -139,6 +149,7 @@ def get_financial_instituitions_legal_person_tariffs(cnpj: str):
         cur.close()
         return res
     except Exception as e:
+        logging.error('Get Financial Instituition Tariffs error', exc_info=True)
         print(f"Get Financial Instituition Tariffs error: {e}")
 
 def get_financial_instituitions_tariffs(cnpj: str):
@@ -155,6 +166,7 @@ def get_financial_instituitions_tariffs(cnpj: str):
         cur.close()
         return res
     except Exception as e:
+        logging.error('Get Financial Instituition Tariffs error', exc_info=True)
         print(f"Get Financial Instituition Tariffs error: {e}")
 
 def get_financial_instituition_groups(id: str):
@@ -174,6 +186,7 @@ def get_financial_instituition_groups(id: str):
         cur.close()
         return res
     except Exception as e:
+        logging.error('Get Financial Instituition Groups from database source error', exc_info=True)
         print(f"Get Financial Instituition Groups from database source error: {e}")
 
 def get_all_consolidated_groups():
@@ -188,6 +201,7 @@ def get_all_consolidated_groups():
         cur.close()
         return res
     except Exception as e:
+        logging.error('Get All Consolidated Groups from database source error', exc_info=True)
         print(f"Get All Consolidated Groups from database source error: {e}")
 
 def get_financial_instituitions_tariffs_by_id(id: str):
@@ -204,6 +218,7 @@ def get_financial_instituitions_tariffs_by_id(id: str):
         cur.close()
         return res
     except Exception as e:
+        logging.error('Get Financial Instituition Tariffs error', exc_info=True)
         print(f"Get Financial Instituition Tariffs error: {e}")
 
 def get_financial_instituitions_physical_person_services(cnpj: str):
@@ -221,4 +236,5 @@ def get_all_tariffs_by_cnpj_and_code(instituition_cnpj: str, service_code: str):
         cur.close()
         return res
     except Exception as e:
+        logging.error('Get All Tariffs by CNPJ and Service Code error', exc_info=True)
         print(f'Get All Tariffs by CNPJ and Service Code error: {e}')

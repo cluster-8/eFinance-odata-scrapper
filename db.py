@@ -1,5 +1,7 @@
 from dotenv import dotenv_values
 import psycopg2
+import logging
+import log
 
 envs = dotenv_values('.env')
 
@@ -12,4 +14,5 @@ def get_database_psql():
          password=envs['DB_PASS'])
       return conn
    except Exception as e:
+      logging.error('Get Database PSQL, connection error', exc_info=True)
       print(e)

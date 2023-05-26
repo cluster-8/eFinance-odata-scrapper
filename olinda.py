@@ -1,4 +1,7 @@
 import requests
+import logging
+import log
+
 
 def get_financial_instituitions():
     '''
@@ -15,6 +18,7 @@ def get_financial_instituitions():
         
         return data
     except Exception as e:
+        logging.error('Get Olinda Financial Instituitions error', exc_info=True)
         print("Get Olinda Financial Instituitions error:", e)
 
 def get_physical_person_tariffs(instituition_cnpj: str):
@@ -35,6 +39,7 @@ def get_physical_person_tariffs(instituition_cnpj: str):
             return result.json()['value']
         
     except Exception as e:
+        logging.error('Get Olinda Physical Person Services Tariffs error', exc_info=True)
         print("Get Olinda Physical Person Services Tariffs error:", e)
 
 def get_juridical_person_tariffs(instituition_cnpj: str):
@@ -54,6 +59,7 @@ def get_juridical_person_tariffs(instituition_cnpj: str):
             return result.json()['value']
         
     except Exception as e:
+        logging.error('Get Olinda Juridical Person Services Tariffs error', exc_info=True)
         print("Get Olinda Juridical Person Services Tariffs error:", e)
         
 def get_tariffs_by_cnpj(cnpj: str, instituition_name: str):
@@ -93,6 +99,7 @@ def get_tariffs_by_cnpj(cnpj: str, instituition_name: str):
         
         return tariffs
     except Exception as e:
+        logging.error('Get tariffs by cnpj error', exc_info=True)
         print(f"Get tariffs by cnpj error: {e}")
         
 def get_consolidated_groups():
@@ -105,6 +112,7 @@ def get_consolidated_groups():
         groups = requests.get(url).json()['value']
         return groups
     except Exception as e:
+        logging.error('Get Consolidated Groups error', exc_info=True)
         print(f"Get Consolidated Groups error: {e}")
         
 def get_financial_instituitions_by_group(group_code: str):
@@ -117,6 +125,7 @@ def get_financial_instituitions_by_group(group_code: str):
         instituitions = requests.get(url).json()['value']
         return instituitions
     except Exception as e:
+        logging.error('Get Financial Instituitions by Consolidated Group error', exc_info=True)
         print(f"Get Financial Instituitions by Consolidated Group error: {e}")
         
 def get_all_services():
@@ -129,6 +138,7 @@ def get_all_services():
         services = requests.get(url).json()['value']
         return services
     except Exception as e:
+        logging.error('Get All Services from Olinda Source error', exc_info=True)
         print(f"Get All Services from Olinda Source error: {e}")
         
 def get_all_services_values_by_group(service_type: str, group_code: str):
@@ -146,4 +156,5 @@ def get_all_services_values_by_group(service_type: str, group_code: str):
         values = requests.get(url).json()['value']
         return values
     except Exception as e:
-        print(f"get All Services Values by Group error: {e}")
+        logging.error('Get All Services Values by Group error', exc_info=True)
+        print(f"Get All Services Values by Group error: {e}")
