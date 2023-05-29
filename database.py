@@ -222,3 +222,14 @@ def get_all_tariffs_by_cnpj_and_code(instituition_cnpj: str, service_code: str):
         return res
     except Exception as e:
         print(f'Get All Tariffs by CNPJ and Service Code error: {e}')
+        
+def get_all_tariffs_by_instituition_and_service(service_id: str, instituition_id: str):
+    try:
+        conn = db.get_database_psql()
+        cur = conn.cursor()
+        cur.execute("SELECT i.nome, s.nome, t.unidade, t.periodicidade, t.moeda, s.codigo, s.tipo, t.valor_maximo, t.created_at FROM tarifas t INNER JOIN servicos s ON s.id = t.servico_id INNER JOIN instituicoes i ON i.id = t.instituicao_id WHERE i.id = %s AND s.id = %s ORDER BY t.created_at ASC", [instituition_id, service_id])
+        res = cur.fetchall()
+        cur.close()
+        return res
+    except Exception as e:
+        print(f'Get All Tariffs by Instituition ID and Service ID error: {e}')
