@@ -1,7 +1,9 @@
 from dotenv import dotenv_values
 import psycopg2
 
-envs = dotenv_values('.env')
+# envs = dotenv_values('.env')
+
+envs = dotenv_values('.env.local')
 
 def get_database_psql():
    try:

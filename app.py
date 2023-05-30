@@ -1,8 +1,10 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS, cross_origin
 import scrapper
 import predict
 
 app = Flask(__name__)
+CORS(app)
  
 @app.route('/run-scrapper', methods=['GET'])
 def run_scrapper():
@@ -19,6 +21,9 @@ def predict_tariff():
         data = request.get_json(force=True)
         service_id, instituition_id = data['serviceId'], data['instituitionId']
         result = predict.get_prediction(service_id, instituition_id)
+        
+        if "message" in result: return jsonify(result), 200
+        
         return jsonify(result)
     
     except Exception as e:

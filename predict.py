@@ -20,11 +20,11 @@ def build_json_response(tariffs: list, prediction):
         "currency": f"{tariffs[0][4]}",
         "code": f"{tariffs[0][5]}",
         "type": f"{tariffs[0][6]}",
-        "predictionData": {
+        "prediction": {
                 "value": prediction_value,
                 "date" : today,
             },
-        "historicData": {
+        "historic": {
             "values": values,
             "dates": dates,
         }
@@ -36,11 +36,12 @@ def tariffs_to_csv(tariffs: list):
     with codecs.open('./models/DATA.csv', 'w', encoding='utf-8') as f:
         writer = csv.writer(f)
         header = ["Date","Close"]
+        if not tariffs: return False
         writer.writerow(header)
         for tariff in tariffs:
             row = [tariff[-1].strftime('%Y-%m-%d'), tariff[-2]]
             writer.writerow(row)
-    return
+    return True
 
 def get_tariffs(service_id: str, instituition_id: str):
     try:
@@ -62,7 +63,11 @@ def get_prediction(service_id, instituition_id):
         tariffs = get_tariffs(service_id, instituition_id)
        
        # generate csv
-        tariffs_to_csv(tariffs)
+        csv_created = tariffs_to_csv(tariffs)
+        if not csv_created:
+            return {
+                "message": "Não há tarifas para o serviço selecionado."
+            }
        
        # serilizar model
         run_serializer()
