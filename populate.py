@@ -2,7 +2,7 @@ import db
 import database
 import olinda
 import logging
-import log
+from datetime import datetime
 
 # * POPULATE DATABASE
 # refatorando
@@ -183,7 +183,7 @@ def insert_financial_instituition_tariffs(instituition: tuple, groups: list):
         print("Gettings Financial Instituition tariffs...")
         instituition_id = instituition[0]
         cnpj = str(instituition[2])
-       
+
         # get physical person services tariffs
         physical_person_tariffs = olinda.get_physical_person_tariffs(cnpj)
         
@@ -257,4 +257,44 @@ def insert_tariffs(instituition_id: str, tariffs: list, groups: list, service_ty
     except Exception as e:
         logging.error('Insert All Tariffs error', exc_info=True)
         print(f"Insert All Tariffs error: {e}")
- 
+
+def insert_tariff(instituition_id: str, service_id: str, tariff, createdAt: str):
+    '''
+    Insert one tariff of a given Financial Instituition.
+    
+    :param instituition_id: str
+    :param service_id: str
+    :param tariffs
+    :param dataVigencia: str
+    '''
+    try:
+        t = {
+            "servico_id" : service_id,
+            "instituicao_id" : instituition_id,
+            "valor_maximo" : float(tariff[5].replace(',', '')),
+            "data_vigencia" : datetime.strptime(tariff[4], '%d/%m/%Y'),
+            "unidade" : tariff[8],
+            "periodicidade": tariff[9],
+            "moeda": tariff[6],
+            "created_at": datetime.strptime(createdAt, '%d/%m/%Y')
+            }
+
+        try:
+            conn = db.get_database_psql()
+            cur = conn.cursor()
+            cur.execute("INSERT INTO tarifas (servico_id, instituicao_id, valor_maximo, data_vigencia, unidade, periodicidade, moeda, created_at) VALUES(%s, %s, %s, %s, %s, %s, %s, %s)", (
+                t['servico_id'],
+                t['instituicao_id'], 
+                t['valor_maximo'], 
+                t['data_vigencia'], 
+                t['unidade'], 
+                t['periodicidade'], 
+                t['moeda'],
+                t['created_at']))
+            conn.commit()
+            cur.close()
+            conn.close()
+        except Exception as e:
+            print(f"Insert Financial Insitituition Tariff error: {e}")
+    except Exception as e:
+        print(f"Insert Tariff error: {e}")

@@ -13,7 +13,7 @@ def get_financial_instituition_id_by_cnpj(instituition_cnpj: str):
     try:
         conn = db.get_database_psql()
         cur = conn.cursor()
-        cur.execute("SELECT * FROM instituicoes WHERE cnpj = %s OR cnpj_formatado = %s", [instituition_cnpj,])
+        cur.execute(f"SELECT * FROM instituicoes WHERE cnpj = '{instituition_cnpj}' OR cnpj_formatado = '{instituition_cnpj}'")
         res = cur.fetchall()
         cur.close()
         return res[0][0] 
@@ -21,7 +21,12 @@ def get_financial_instituition_id_by_cnpj(instituition_cnpj: str):
         logging.error('Get Financial Instituition Id by CNPJ error', exc_info=True)
         print(f"Get Financial Instituition Id by CNPJ error: {e}")
 
-def get_service_id_by_code(service_code: str):
+def get_service_id_by_code(service_code: str, service_tipo: str = None):
+    query = f"SELECT * FROM servicos WHERE codigo = '{service_code}'"
+
+    if (service_tipo):
+        query = query + f" AND tipo = '{service_tipo}'"
+
     '''
     Returns Service ID from database
     
@@ -30,14 +35,14 @@ def get_service_id_by_code(service_code: str):
     try:
         conn = db.get_database_psql()
         cur = conn.cursor()
-        cur.execute("SELECT * FROM servicos WHERE codigo = %s", [service_code,])
+        cur.execute(query)
         res = cur.fetchall()
         cur.close()
         return res[0]
     except Exception as e:
         logging.error('Get Service ID by Code error', exc_info=True)
         print(f"Get Service ID by Code error: {e}")
-             
+
 def get_all_financial_instituitions():
     '''
     Returns the list of financial instituitions from database source.
