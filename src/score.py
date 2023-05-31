@@ -1,11 +1,9 @@
-import db
-import json
-import database
-import olinda
+from .db import *
+from .database import *
 
 # Cron para atualizar os valores do score diariamente
 def populate_scores():
-    instituicoes = database.get_all_financial_instituitions()
+    instituicoes = get_all_financial_instituitions()
 
     for instituicao in instituicoes:
         populate_score_by_institution(instituicao[2], instituicao)
@@ -13,11 +11,11 @@ def populate_scores():
 # Ação a ser chamada quando uma instituição receber uma nova tarifa
 def populate_score_by_institution(cnpj, instituicao):
     if not instituicao: 
-        instituicao = database.get_financial_instituition_id_by_cnpj(cnpj)
+        instituicao = get_financial_instituition_id_by_cnpj(cnpj)
 
     print(instituicao[0])
 
-    tarifas = database.get_financial_instituitions_tariffs_by_id(instituicao[0])
+    tarifas = get_financial_instituitions_tariffs_by_id(instituicao[0])
 
     tarifasPf = []
     tarifasPj = []
@@ -50,7 +48,7 @@ def populate_score_by_institution(cnpj, instituicao):
 
 
 def create_score(instituicaoId, scorePf, scorePj, scoreTtl, qtdServicos):
-    conn = db.get_database_psql()
+    conn = get_database_psql()
     cur = conn.cursor()
     cur.execute("INSERT INTO scores (instituicao_id, score_pf, score_pj, score_ttl, qtd_servicos) VALUES (%s, %s, %s, %s, %s)", (instituicaoId, scorePf, scorePj, scoreTtl, qtdServicos))
     conn.commit()
@@ -58,7 +56,7 @@ def create_score(instituicaoId, scorePf, scorePj, scoreTtl, qtdServicos):
     conn.close()
 
 def find_last_score_by_instituicao(instituicaoId):
-    conn = db.get_database_psql()
+    conn = get_database_psql()
     cur = conn.cursor()
     cur.execute(f"select * from scores where instituicao_id = '{instituicaoId}' order by created_at desc limit 1")
     res = cur.fetchall()

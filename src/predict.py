@@ -1,5 +1,5 @@
 import pickle
-import database
+from .database import *
 import codecs
 import csv
 from datetime import date
@@ -45,7 +45,7 @@ def tariffs_to_csv(tariffs: list):
 
 def get_tariffs(service_id: str, instituition_id: str):
     try:
-        result = database.get_all_tariffs_by_instituition_and_service(service_id, instituition_id)
+        result = get_all_tariffs_by_instituition_and_service(service_id, instituition_id)
         return result
     except Exception as e:
         print(f'Get Tariffs error: {e}')

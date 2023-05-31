@@ -1,4 +1,4 @@
-import database
+from .database import *
 from datetime import datetime
 
 CURRENT_DAY = datetime.now().day

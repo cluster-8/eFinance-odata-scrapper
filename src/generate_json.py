@@ -3,9 +3,8 @@ import json
 import datetime
 import requests
 import logging
-import log
 
-import database
+from .database import *
 
 # * GENERATE JSON FILES
 def servicos_pf():
@@ -15,7 +14,7 @@ def servicos_pf():
     logging.info('Criando servicos.json.', exc_info=True)
     print(f'{datetime.datetime.now()} - criando servicos.json.')
     try:
-        ifs = database.instituicoes()        
+        ifs = instituicoes()        
         all_services = []
         
         json_data = open('bkp-services.json')
@@ -31,7 +30,7 @@ def servicos_pf():
             print(f'{datetime.datetime.now()} - buscando serviços de {if_name} ------------------------')
             # cnpj = i['CnpjInstituicao']
             cnpj = ifs[idx]['CnpjInstituicao']
-            services = database.servicos_pf(cnpj)
+            services = servicos_pf(cnpj)
             
             if len(services) > 0: 
                 for i in services:
@@ -68,7 +67,7 @@ def servicos_pj():
     logging.info('Criando servicos.json.', exc_info=True)
     print(f'{datetime.datetime.now()} - criando servicos.json.')
     try:
-        ifs = database.instituicoes()        
+        ifs = instituicoes()        
         all_services = []
         
         # json_data = open('./json/services-pj-2.json')
@@ -79,7 +78,7 @@ def servicos_pj():
             if_name = ifs[idx]['NomeInstituicao']
             print(f'{datetime.datetime.now()} - buscando serviços de {if_name} ------------------------')
             cnpj = ifs[idx]['CnpjInstituicao']
-            services = database.servicos_pj(cnpj)
+            services = servicos_pj(cnpj)
             
             if len(services) > 0: 
                 for i in services:
@@ -115,7 +114,7 @@ def instituicoes():
     logging.info('Gerando instituições.json.', exc_info=True)
     print(f'{datetime.datetime.now()}- gerando instituições.json')
     try:
-        data = database.instituicoes()
+        data = instituicoes()
         aux = []
         for i in data:
             cnpj_formatado = get_cnpj_formatado(i['CnpjInstituicao'])
@@ -147,7 +146,7 @@ def grupos():
     logging.info('gerando grupos.json', exc_info=True)
     print(f'{datetime.datetime.now()}- gerando grupos.json')
     try:
-        data = database.grupos()
+        data = grupos()
         aux = []
         for val in data:
             obj = {
@@ -171,12 +170,12 @@ def tarifas_pf():
     logging.info('criando tarifas-pf.json', exc_info=True)
     print(f'{datetime.datetime.now()} - criando tarifas-pf.json.')
     try:
-        ifs = database.get_all_instituicoes()
+        ifs = get_all_instituicoes()
         aux = []
         for idx in ifs:
             instituicao_id = idx[0]
             cnpj_formatado = idx[4]
-            tarifas = database.tarifas_pf(cnpj_formatado)
+            tarifas = tarifas_pf(cnpj_formatado)
             
             if not tarifas: 
                 print(f'{datetime.datetime.now()} - nenhuma tarifa encontrada para instituicão de CNPJ: {cnpj_formatado}')
@@ -184,7 +183,7 @@ def tarifas_pf():
             else:
                 for t in tarifas:
                     cod_servico = t['CodigoServico']
-                    servico = database.get_servico_id_by_codigo(cod_servico)
+                    servico = get_servico_id_by_codigo(cod_servico)
                     servico_id = servico[0]
                     
                     obj = {
@@ -227,12 +226,12 @@ def tarifas_pj():
     logging.info('criando tarifas-pj.json', exc_info=True)
     print(f'{datetime.datetime.now()} - criando tarifas-pj.json.')
     try:
-        ifs = database.get_all_instituicoes()
+        ifs = get_all_instituicoes()
         aux = []
         for idx in ifs:
             instituicao_id = idx[0]
             cnpj_formatado = idx[4]
-            tarifas = database.tarifas_pj(cnpj_formatado)
+            tarifas = tarifas_pj(cnpj_formatado)
             
             if not tarifas: 
                 print(f'{datetime.datetime.now()} - nenhuma tarifa encontrada para instituicão de CNPJ: {cnpj_formatado}')
@@ -240,7 +239,7 @@ def tarifas_pj():
             else:
                 for t in tarifas:
                     cod_servico = t['CodigoServico']
-                    servico = database.get_servico_id_by_codigo(cod_servico)
+                    servico = get_servico_id_by_codigo(cod_servico)
                     servico_id = servico[0]
                     
                     obj = {

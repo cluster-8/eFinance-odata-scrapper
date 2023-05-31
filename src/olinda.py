@@ -1,7 +1,5 @@
 import requests
 import logging
-import log
-
 
 def get_financial_instituitions():
     '''
