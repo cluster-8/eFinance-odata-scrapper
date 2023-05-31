@@ -2,9 +2,9 @@ from flask import Flask, jsonify
 import scrapper
 import logging
 import log
- 
+
 app = Flask(__name__)
- 
+
 @app.route('/run-scrapper', methods=['GET'])
 def run_scrapper():
     try:
@@ -23,6 +23,10 @@ def predict_tariff():
     except Exception as e:
         logging.error('Predict Tariff error', exc_info=True)
         print(f'Predict Tariff error: {e}')
-         
+        
+@app.route('/', methods=['GET'])
+def hello():
+    return jsonify("Hello World")
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000, debug=True)
