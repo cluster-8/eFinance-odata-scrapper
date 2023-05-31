@@ -185,7 +185,6 @@ tqdm==4.64.1
 traitlets==5.9.0
 typeguard==2.13.3
 typing_extensions==4.5.0
-ufw==0.36.1
 unattended-upgrades==0.1
 usb-creator==0.3.7
 virtualenv==20.13.0+ds
