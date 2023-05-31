@@ -1,7 +1,6 @@
 import csv
-import db
-import database
-import populate
+from .database import *
+from .populate import *
 
 def populate_tariffs_historic():
   with open('./csvs/202205TARINST.CSV', newline='', encoding='latin-1') as csvfile:
@@ -28,19 +27,19 @@ def populate_tariffs_historic():
       for value in row:
         values.extend(value.replace('  ', '').split(';'))
 
-      instituicao = database.get_financial_instituition_id_by_cnpj(values[0])
+      instituicao = get_financial_instituition_id_by_cnpj(values[0])
 
       if not instituicao:
         print('instituicao not found, cnpj:', values[0])
         continue
 
-      servico = database.get_service_id_by_code(values[2].replace('.', '').replace(' ', ''), values[7].replace(' ', ''))
+      servico = get_service_id_by_code(values[2].replace('.', '').replace(' ', ''), values[7].replace(' ', ''))
 
       if not servico:
         print('servico not found, servicoCode:', values[2].replace('.', ''), ' ', values[7].replace(' ', ''))
         continue
 
-      populate.insert_tariff(instituicao, servico[0], values, createdAt)
+      insert_tariff(instituicao, servico[0], values, createdAt)
       
 
 

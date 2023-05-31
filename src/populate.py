@@ -1,6 +1,6 @@
-import db
-import database
-import olinda
+from .db import *
+from .database import *
+from .olinda import *
 import logging
 from datetime import datetime
 
@@ -11,8 +11,8 @@ def insert_financial_instituitions():
     Insert Financial Instituitions on database if it not exists.
     '''
     try:
-        olinda_instituitions = olinda.get_financial_instituitions()
-        db_instituitions = database.get_all_financial_instituitions()
+        olinda_instituitions = get_financial_instituitions()
+        db_instituitions = get_all_financial_instituitions()
         
         db_instituitions = 0 if db_instituitions == None else len(db_instituitions)
         print(db_instituitions)
@@ -21,7 +21,7 @@ def insert_financial_instituitions():
                 if i['CnpjInstituicao'] not in str(db_instituitions):
                     try:
                         nome, cnpj, cnpj8 = i['NomeInstituicao'], i['CnpjInstituicao'], i['CnpjInstituicao'][:8]
-                        conn = db.get_database_psql()
+                        conn = get_database_psql()
                         cur = conn.cursor()
                         cur.execute("INSERT INTO instituicoes (nome, cnpj, cnpj_formatado) VALUES(%s, %s, %s)", (nome, cnpj, cnpj8))
                         conn.commit()
@@ -31,7 +31,7 @@ def insert_financial_instituitions():
                         print(f"Inserting Financial Instituition: {nome} {cnpj}")
                     except Exception as e:
                         print(f"Insert Financial Instituition {nome} {cnpj} on database error: {e}")
-        else: print("There is no new Financial Instituitions to be inserted on database.")
+        else: print("There is no new Financial Instituitions to be inserted on ")
     except Exception as e:
         logging.error("Insert Financial Instituitions error", exc_info=True)
         print("Insert Financial Instituitions error:", e)
@@ -41,11 +41,11 @@ def insert_physical_person_services():
     Insert Physical Person Services on database if it not exists.
     '''
     try:
-        instituitions = database.get_all_financial_instituitions()
+        instituitions = get_all_financial_instituitions()
         for i in instituitions:
             cnpj = i[3]
-            # services = database.services_pf(cnpj)
-            services = olinda.get_physical_person_tariffs(cnpj)
+            # services = services_pf(cnpj)
+            services = get_physical_person_tariffs(cnpj)
             if not services:
                 print(f'There is no Physical Person Services found for Financial Instituition {i[2]} {cnpj}')
                 continue
@@ -54,7 +54,7 @@ def insert_physical_person_services():
                 code, name, service_type = i['CodigoServico'], i['Servico'], "F"
                 if code in inserted_services_codes: continue
                 try: 
-                    conn = db.get_database_psql()
+                    conn = get_database_psql()
                     cur = conn.cursor()
                     cur.execute("INSERT INTO servicos (codigo, nome, tipo) VALUES(%s, %s, %s)", (code, name, service_type))
                     conn.commit()
@@ -74,11 +74,11 @@ def insert_juridical_person_services():
     Insert Legal Juridical Services on database if it not exists.
     '''
     try:
-        instituitions = database.get_all_financial_instituitions()
+        instituitions = get_all_financial_instituitions()
         for i in instituitions:
             cnpj = i[3]
-            # services = database.services_pf(cnpj)
-            services = olinda.get_juridical_person_tariffs(cnpj)
+            # services = services_pf(cnpj)
+            services = get_juridical_person_tariffs(cnpj)
             if not services:
                 print(f'There is no Juridical Person Services found for Financial Instituition {i[2]} {cnpj}')
                 continue
@@ -87,7 +87,7 @@ def insert_juridical_person_services():
                 code, name, service_type = i['CodigoServico'], i['Servico'], "J"
                 if code in inserted_services_codes: continue
                 try: 
-                    conn = db.get_database_psql()
+                    conn = get_database_psql()
                     cur = conn.cursor()
                     cur.execute("INSERT INTO servicos (codigo, nome, tipo) VALUES(%s, %s, %s)", (code, name, service_type))
                     conn.commit()
@@ -107,19 +107,19 @@ def insert_consolidated_groups():
     Insert all consolidated groups from Olinda Source.
     '''
     try:
-        database_groups = database.get_all_consolidated_groups()
+        database_groups = get_all_consolidated_groups()
         if not database_groups:
             print("No consolidated groups from Olinda Source were found!")
             return
         
-        olinda_groups = olinda.get_consolidated_groups()
+        olinda_groups = get_consolidated_groups()
         if not olinda_groups:
             print("No consolidated groups from Olinda Source were found!")
             return
        
         for group in olinda_groups:
             try:
-                conn = db.get_database_psql()
+                conn = get_database_psql()
                 cur = conn.cursor()
                 cur.execute("INSERT INTO grupos (codigo, nome) VALUES(%s, %s)", (
                     group['Codigo'],
@@ -140,16 +140,16 @@ def insert_financial_instituition_groups():
     Insert Financial Instituitions Groups from Olinda Source.
     '''
     try:
-        groups = database.get_all_consolidated_groups()
+        groups = get_all_consolidated_groups()
         for group in groups:
             group_code = group[2]
-            instituitions = olinda.get_financial_instituitions_by_group(group_code)
+            instituitions = get_financial_instituitions_by_group(group_code)
             if not instituitions:
                 print(f"No Financial Instituitions were found for consolidated group", code)
                 continue
             
             for instituition in instituitions:
-                inst_on_database = database.get_financial_instituition_by_cnpj8(instituition['Cnpj'])
+                inst_on_database = get_financial_instituition_by_cnpj8(instituition['Cnpj'])
                 if not inst_on_database:
                     print(f"No Financial Instituition was found on database for CNPJ8: {i['Cnpj']}")
                     continue
@@ -158,7 +158,7 @@ def insert_financial_instituition_groups():
                 group_id = group[0]
                 
                 try:
-                    conn = db.get_database_psql()
+                    conn = get_database_psql()
                     cur = conn.cursor()
                     cur.execute("INSERT INTO instituicao_grupo (instituicao_id, grupo_id) VALUES(%s, %s)", (inst_id, group_id))
                     conn.commit()
@@ -185,14 +185,14 @@ def insert_financial_instituition_tariffs(instituition: tuple, groups: list):
         cnpj = str(instituition[2])
 
         # get physical person services tariffs
-        physical_person_tariffs = olinda.get_physical_person_tariffs(cnpj)
+        physical_person_tariffs = get_physical_person_tariffs(cnpj)
         
         # insert physical person services tariffs
         print("Inserting physical person services tariffs...")
         insert_tariffs(instituition_id, physical_person_tariffs, groups, "F")
         
         # get juridical person services tariffs
-        juridical_person_tariffs = olinda.get_juridical_person_tariffs(cnpj)
+        juridical_person_tariffs = get_juridical_person_tariffs(cnpj)
         
         # insert physical person services tariffs
         print("Inserting juridical person services tariffs...")
@@ -216,14 +216,14 @@ def insert_tariffs(instituition_id: str, tariffs: list, groups: list, service_ty
         all_values = []
         for g in groups:
             group_code = g[0]
-            values = olinda.get_all_services_values_by_group(service_type, group_code)
+            values = get_all_services_values_by_group(service_type, group_code)
             all_values = [*all_values, *values]
         
         for tariff in tariffs:
             service_name = tariff['Servico']
             service_values = [v['ValorMinimo'] for v in all_values if v['NomeServico'] == service_name]
             code = tariff['CodigoServico']
-            service_id = database.get_service_id_by_code(code)[0]
+            service_id = get_service_id_by_code(code)[0]
             min_value = min(service_values) if service_values else None
             
             t = {
@@ -238,7 +238,7 @@ def insert_tariffs(instituition_id: str, tariffs: list, groups: list, service_ty
                 }
             
             try:
-                conn = db.get_database_psql()
+                conn = get_database_psql()
                 cur = conn.cursor()
                 cur.execute("INSERT INTO tarifas (servico_id, instituicao_id, valor_maximo, valor_minimo, data_vigencia, unidade, periodicidade, moeda) VALUES(%s, %s, %s, %s, %s, %s, %s, %s)", (
                     t['servico_id'],
@@ -280,7 +280,7 @@ def insert_tariff(instituition_id: str, service_id: str, tariff, createdAt: str)
             }
 
         try:
-            conn = db.get_database_psql()
+            conn = get_database_psql()
             cur = conn.cursor()
             cur.execute("INSERT INTO tarifas (servico_id, instituicao_id, valor_maximo, data_vigencia, unidade, periodicidade, moeda, created_at) VALUES(%s, %s, %s, %s, %s, %s, %s, %s)", (
                 t['servico_id'],

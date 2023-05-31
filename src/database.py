@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
-import db
+from .db import *
 import logging
-import log
 
 # * DATABASE SOURCE
 def get_financial_instituition_id_by_cnpj(instituition_cnpj: str):
@@ -11,7 +10,7 @@ def get_financial_instituition_id_by_cnpj(instituition_cnpj: str):
     :param instituition_cnpj: str
     '''
     try:
-        conn = db.get_database_psql()
+        conn = get_database_psql()
         cur = conn.cursor()
         cur.execute(f"SELECT * FROM instituicoes WHERE cnpj = '{instituition_cnpj}' OR cnpj_formatado = '{instituition_cnpj}'")
         res = cur.fetchall()
@@ -33,7 +32,7 @@ def get_service_id_by_code(service_code: str, service_tipo: str = None):
     :param service_code: str
     '''
     try:
-        conn = db.get_database_psql()
+        conn = get_database_psql()
         cur = conn.cursor()
         cur.execute(query)
         res = cur.fetchall()
@@ -48,7 +47,7 @@ def get_all_financial_instituitions():
     Returns the list of financial instituitions from database source.
     '''
     try:
-        conn = db.get_database_psql()
+        conn = get_database_psql()
         cur = conn.cursor()
         cur.execute("SELECT * FROM instituicoes")
         # cur.execute("SELECT * FROM instituicoes i INNER JOIN instituicao_grupo ig  ON ig.instituicao_id =i.id INNER JOIN grupos g ON g.id =ig.grupo_id ")
@@ -64,7 +63,7 @@ def get_all_tariffs():
     Returns the list of all tariffs from database source.
     '''
     try:
-        conn = db.get_database_psql()
+        conn = get_database_psql()
         cur = conn.cursor()
         cur.execute("SELECT * FROM tarifas")
         res = cur.fetchall()
@@ -79,7 +78,7 @@ def get_all_services():
     Returns the list of all services from database source.
     '''
     try:
-        conn = db.get_database_psql()
+        conn = get_database_psql()
         cur = conn.cursor()
         cur.execute("SELECT * FROM servicos")
         res = cur.fetchall()
@@ -96,7 +95,7 @@ def get_financial_instituition_by_cnpj(cnpj: str):
     :param cnpj: str
     '''
     try:
-        conn = db.get_database_psql()
+        conn = get_database_psql()
         cur = conn.cursor()
         cur.execute("SELECT * FROM instituicoes WHERE cnpj = %s", [cnpj,])
         res = cur.fetchall()
@@ -113,7 +112,7 @@ def get_financial_instituition_by_cnpj8(cnpj8: str):
     :param cnpj8: str
     '''
     try:
-        conn = db.get_database_psql()
+        conn = get_database_psql()
         cur = conn.cursor()
         cur.execute("SELECT * FROM instituicoes WHERE cnpj_formatado = %s", [cnpj8,])
         res = cur.fetchall()
@@ -130,7 +129,7 @@ def get_financial_instituitions_physical_person_tariffs(cnpj: str):
     :param cnpj: str 
     '''
     try:    
-        conn = db.get_database_psql()
+        conn = get_database_psql()
         cur = conn.cursor()
         cur.execute("SELECT * FROM instituicoes i INNER JOIN tarifas t ON t.instituicao_id =i.id INNER JOIN servicos s ON s.id =t.servico_id WHERE i.cnpj = %s AND s.tipo = 'F'", [cnpj,])
         res = cur.fetchall()
@@ -147,7 +146,7 @@ def get_financial_instituitions_legal_person_tariffs(cnpj: str):
     :param cnpj: str 
     '''
     try:    
-        conn = db.get_database_psql()
+        conn = get_database_psql()
         cur = conn.cursor()
         cur.execute("SELECT * FROM instituicoes i INNER JOIN tarifas t ON t.instituicao_id =i.id INNER JOIN servicos s ON s.id =t.servico_id WHERE i.cnpj = %s AND s.tipo = 'J'", [cnpj,])
         res = cur.fetchall()
@@ -164,7 +163,7 @@ def get_financial_instituitions_tariffs(cnpj: str):
     :param cnpj: str 
     '''
     try:    
-        conn = db.get_database_psql()
+        conn = get_database_psql()
         cur = conn.cursor()
         cur.execute("SELECT * FROM instituicoes i INNER JOIN tarifas t ON t.instituicao_id =i.id INNER JOIN servicos s ON s.id =t.servico_id WHERE i.cnpj = %s", [cnpj,])
         res = cur.fetchall()
@@ -181,7 +180,7 @@ def get_financial_instituition_groups(id: str):
     :param cnpj: str
     '''
     try:
-        conn = db.get_database_psql()
+        conn = get_database_psql()
         cur = conn.cursor()
         cur.execute("SELECT g.codigo, g.nome FROM instituicoes i \
                     INNER JOIN instituicao_grupo ig  ON ig.instituicao_id = i.id \
@@ -199,7 +198,7 @@ def get_all_consolidated_groups():
     Returns the list of all consolidated groups from database source.
     '''
     try:
-        conn = db.get_database_psql()
+        conn = get_database_psql()
         cur = conn.cursor()
         cur.execute("SELECT * FROM grupos")
         res = cur.fetchall()
@@ -216,7 +215,7 @@ def get_financial_instituitions_tariffs_by_id(id: str):
     :param id: str 
     '''
     try:    
-        conn = db.get_database_psql()
+        conn = get_database_psql()
         cur = conn.cursor()
         cur.execute("SELECT DISTINCT ON (t.servico_id) t.servico_id, t.valor_maximo, s.tipo, s.nome, t.data_vigencia FROM (SELECT * FROM tarifas WHERE instituicao_id = %s ORDER BY data_vigencia desc) t inner join servicos s on s.id = t.servico_id", [id])
         res = cur.fetchall()
@@ -234,7 +233,7 @@ def get_financial_instituitions_legal_person_services(cnpj: str):
 
 def get_all_tariffs_by_cnpj_and_code(instituition_cnpj: str, service_code: str):
     try:
-        conn = db.get_database_psql()
+        conn = get_database_psql()
         cur = conn.cursor()
         cur.execute("SELECT t.valor_maximo, t.data_vigencia, t.unidade, t.periodicidade, t.moeda, s.nome, s.codigo, s.tipo FROM tarifas t INNER JOIN servicos s ON s.id = t.servico_id INNER JOIN instituicoes i ON i.id = t.instituicao_id WHERE i.cnpj = %s AND s.codigo = %s ORDER BY t.data_vigencia ASC", [instituition_cnpj, service_code])
         res = cur.fetchall()
@@ -246,7 +245,7 @@ def get_all_tariffs_by_cnpj_and_code(instituition_cnpj: str, service_code: str):
         
 def get_all_tariffs_by_instituition_and_service(service_id: str, instituition_id: str):
     try:
-        conn = db.get_database_psql()
+        conn = get_database_psql()
         cur = conn.cursor()
         cur.execute("SELECT i.nome, s.nome, t.unidade, t.periodicidade, t.moeda, s.codigo, s.tipo, t.valor_maximo, t.created_at FROM tarifas t INNER JOIN servicos s ON s.id = t.servico_id INNER JOIN instituicoes i ON i.id = t.instituicao_id WHERE i.id = %s AND s.id = %s ORDER BY t.created_at ASC", [instituition_id, service_id])
         res = cur.fetchall()
