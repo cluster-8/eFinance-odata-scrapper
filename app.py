@@ -1,9 +1,8 @@
 from flask import Flask, jsonify, request
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 import scrapper
 import logging
 import predict
-import log
 
 app = Flask(__name__)
 CORS(app)
@@ -35,4 +34,4 @@ def predict_tariff():
         print(f'Predict Tariff error: {e}')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=3000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
