@@ -91,9 +91,9 @@ def generate_series():
                 
                 # ? caso em que há mais de uma tarifa para o serviço
                 elif len(tariffs) > 1:
-                    print(tariffs)
-                    generate_tariffs_series(tariffs)
-                    pass
+
+                    result = generate_tariffs_series(tariffs)
+                    return result
                 
                 # ? caso em que há apenas uma tarifa para o serviço
                 else:
@@ -116,12 +116,10 @@ def generate_tariffs_series(tariffs: list):
             
             # * percorrendo tarifas
             for t in tariffs:
-                # print("For de Tariffs: ", t)
                 year, month, val = t[1].year, t[1].month, t[0]
                 
                 # * percorrendo datas mock
                 for md in mock_dates:
-                    # print("For de MockDates: ", md)
                     date = datetime.strptime(md, '%Y-%m-%d').date()
                     m_year, m_month = date.year, date.month
                     
@@ -136,9 +134,7 @@ def generate_tariffs_series(tariffs: list):
                             data = [md, None]
                     elif m_year > year:
                         if not data[0]:
-                            # print("A: ", data) 
                             data = [md, val]
-                            # print("B: ", data)
                     else:
                         data = [md, None]
                     aux.append(data)
@@ -153,7 +149,10 @@ def generate_tariffs_series(tariffs: list):
                 
             aux.reverse()
             aux = aux[:37]
-            return aux.reverse()
+            # print("AUX", aux)
+            result = aux.reverse()
+            # return aux.reverse()
+            return result
         
         # * uma tarifa para o serviço
         # todo: continuar...
