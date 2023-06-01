@@ -2,9 +2,12 @@ from dotenv import dotenv_values
 import psycopg2
 import logging
 
-# envs = dotenv_values('.env')
+envs = dotenv_values('.env')
 
-envs = dotenv_values('.env.local')
+print(envs['DB_HOST'])
+print(envs['DB_NAME'])
+print(envs['DB_USER'])
+print(envs['DB_PASS'])
 
 def get_database_psql():
    try:
