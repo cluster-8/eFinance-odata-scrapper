@@ -3,8 +3,6 @@ from flask_cors import CORS
 
 import  logging
 
-from src.__init__ import *
-
 from src.scrapper import * 
 from src.predict import *
 
