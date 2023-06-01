@@ -1,6 +1,8 @@
 import logging
 
-logging.basicConfig(level=logging.INFO, filename='./../logs/log.log', filemode='w', format='%(asctime)s - %(levelname)s - %(message)s')
+open('./logs/log.log', 'w+')
+
+logging.basicConfig(level=logging.INFO, filename='./logs/log.log', filemode='w', format='%(asctime)s - %(levelname)s - %(message)s')
 
 # logging.debug('debug')
 # logging.info('info')
