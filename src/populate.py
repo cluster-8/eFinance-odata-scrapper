@@ -298,3 +298,51 @@ def insert_tariff(instituition_id: str, service_id: str, tariff, createdAt: str)
             print(f"Insert Financial Insitituition Tariff error: {e}")
     except Exception as e:
         print(f"Insert Tariff error: {e}")
+
+def insert_all_tariffs():
+    try:
+        instituitions = get_all_financial_instituitions()
+        for i in instituitions:
+            id = i[0]
+            groups = get_financial_instituition_groups(id)
+            insert_financial_instituition_tariffs(i, groups)
+    except Exception as e:
+        print(f'Insert All Tariffs error: {e}')
+        
+def insert_logs():
+    try:
+        file = "./logs/log.log"
+        with open(file) as f:
+            for line in f:
+                insert_log_line(line)
+                # print(line)
+                break
+    except Exception as e:
+        print(f'Insert Logs error: {e}')
+        
+def parse_log_data(log_line):
+    try:
+        log_date = log_line.split(',')[0]
+        log_content = log_line.split(',')[1]
+        log_type = log_content.split('-')[1].lstrip()
+        
+        return log_date, log_type, log_content
+    except Exception as e:
+        print(f'Parse Log Data error: {e}')
+        
+def insert_log_line(log_line):
+    try:
+        if not log_line: return
+        date, log_type, content = parse_log_data(log_line)
+        conn = get_database_psql()
+        cur = conn.cursor()
+        cur.execute("INSERT INTO logs (log_date, log_type, log_content) VALUES(%s, %s, %s)", (
+            date,
+            log_type,
+            content))
+        conn.commit()
+        cur.close()
+        conn.close()
+    except Exception as e:
+        print(f'Insert Log Line error: {e}')
+        

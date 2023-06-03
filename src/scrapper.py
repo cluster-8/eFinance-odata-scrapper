@@ -8,11 +8,7 @@ def run_update_database():
     insert_consolidated_groups()
     insert_financial_instituitions()
     insert_physical_person_services()
-    insert_tarifas()
-    populate_scores()
-    generate_series()
+    insert_all_tariffs()
+    # insert_logs()
+    
     print("Database updated successfully!")
-
-# if __name__ == "__main__":
-#     run_update_database()
-#     print("main!")
