@@ -9,6 +9,5 @@ def run_update_database():
     insert_financial_instituitions()
     insert_physical_person_services()
     insert_all_tariffs()
-    # insert_logs()
-    
+    insert_logs()
     print("Database updated successfully!")

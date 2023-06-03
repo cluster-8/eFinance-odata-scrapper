@@ -315,8 +315,6 @@ def insert_logs():
         with open(file) as f:
             for line in f:
                 insert_log_line(line)
-                # print(line)
-                break
     except Exception as e:
         print(f'Insert Logs error: {e}')
         
@@ -336,7 +334,7 @@ def insert_log_line(log_line):
         date, log_type, content = parse_log_data(log_line)
         conn = get_database_psql()
         cur = conn.cursor()
-        cur.execute("INSERT INTO logs (log_date, log_type, log_content) VALUES(%s, %s, %s)", (
+        cur.execute("INSERT INTO logs (date, type, content) VALUES(%s, %s, %s)", (
             date,
             log_type,
             content))

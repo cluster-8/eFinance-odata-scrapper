@@ -5,6 +5,7 @@ import  logging
 
 from src.scrapper import * 
 from src.predict import *
+from src.logs_service import *
 
 app = Flask(__name__)
 CORS(app)
@@ -14,7 +15,7 @@ def run_scrapper():
     try:
         run_update_database()
         logging.info('Database updated successfully!')
-        return jsonify('Database updated successfully!')
+        return jsonify('"message": "Database updated successfully!"')
     
     except Exception as e:
         logging.error('Run Scrapper error', exc_info=True)
@@ -35,9 +36,16 @@ def predict_tariff():
         logging.error('Predict Tariff error', exc_info=True)
         print(f'Predict Tariff error: {e}')
         
-@app.route('/', methods=['GET'])
-def hello():
-    return jsonify('Hello World')
+@app.route('/logs', methods=['GET'])
+def logs():
+    try:
+        start = request.args.get('start')
+        end = request.args.get('end')
+        response = get_logs(start, end)
+        return jsonify(response)
+    except Exception as e:
+        print(f'Logs error: {e}')
+        return jsonify(f'"error": "{e}"')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
