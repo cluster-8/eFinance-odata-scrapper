@@ -2,12 +2,13 @@ import pickle
 from .database import *
 import codecs
 import csv
+import datetime
 from datetime import date
 
 def build_json_response(tariffs: list, prediction):
     
     prediction_value = prediction.tail(1).values[0]
-    today = date.today()
+    tomorrow = date.today() + datetime.timedelta(days=1)
     
     values = [val[-2] for val in tariffs]
     dates = [val[-1] for val in tariffs]
@@ -22,7 +23,7 @@ def build_json_response(tariffs: list, prediction):
         "type": f"{tariffs[0][6]}",
         "prediction": {
                 "value": prediction_value,
-                "date" : today,
+                "date" : tomorrow, #today,
             },
         "historic": {
             "values": values,
