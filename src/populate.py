@@ -314,6 +314,7 @@ def insert_logs():
         file = "./logs/log.log"
         with open(file) as f:
             for line in f:
+                if "* Running" in line: continue
                 insert_log_line(line)
     except Exception as e:
         print(f'Insert Logs error: {e}')
