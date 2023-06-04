@@ -22,8 +22,8 @@ def build_json_response(tariffs: list, prediction):
         "code": f"{tariffs[0][5]}",
         "type": f"{tariffs[0][6]}",
         "prediction": {
-                "value": prediction_value,
-                "date" : tomorrow, #today,
+                "value": float("{:.2f}".format(prediction_value)),
+                "date" : tomorrow,
             },
         "historic": {
             "values": values,
