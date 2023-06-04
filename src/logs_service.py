@@ -44,7 +44,7 @@ def parse_logs(logs):
                 "date": log[1],
                 "type": log[2],
                 "content": log[3],
-                "createdAr": log[4]
+                "createdAt": log[4]
             })
         
         response['data'] = parsed_logs
