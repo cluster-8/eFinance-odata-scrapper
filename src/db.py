@@ -2,6 +2,7 @@ from dotenv import dotenv_values
 import os
 import psycopg2
 import logging
+import os
 
 envs = dotenv_values('./.env')
 
