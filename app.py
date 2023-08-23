@@ -49,7 +49,7 @@ def logs():
         return jsonify(f'"error": "{e}"')
 
 @app.route('/populate-historic', methods=['GET'])
-def run_scrapper():
+def run_populate_historic():
     try:
         populate_tariffs_historic()
         logging.info('Database updated with historic data successfully!')
