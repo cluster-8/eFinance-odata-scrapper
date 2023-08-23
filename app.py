@@ -6,6 +6,7 @@ import  logging
 from src.scrapper import * 
 from src.predict import *
 from src.logs_service import *
+from src.populate_historic import *
 
 app = Flask(__name__)
 CORS(app)
@@ -46,6 +47,17 @@ def logs():
     except Exception as e:
         print(f'Logs error: {e}')
         return jsonify(f'"error": "{e}"')
+
+@app.route('/populate-historic', methods=['GET'])
+def run_scrapper():
+    try:
+        populate_tariffs_historic()
+        logging.info('Database updated with historic data successfully!')
+        return jsonify('"message": "Database updated with historic data successfully!"')
+    
+    except Exception as e:
+        logging.error('Populate Historic error', exc_info=True)
+        print(f'Populate Historic error: {e}')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
